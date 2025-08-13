@@ -1,0 +1,94 @@
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import oplaLogo from '@/assets/opla-logo.png';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo and Brand */}
+          <div className="flex items-center space-x-4">
+            <img src={oplaLogo} alt="OPLA" className="h-10 w-10" />
+            <div className="hidden md:block">
+              <span className="text-lg font-bold text-construction-blue">OPLA</span>
+              <span className="text-sm text-muted-foreground ml-2">Arquitectura • Construcción • Para Empresas • Para Viviendas</span>
+            </div>
+            <div className="md:hidden">
+              <span className="text-lg font-bold text-construction-blue">OPLA</span>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={() => scrollToSection('inicio')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Inicio
+            </button>
+            <button
+              onClick={() => scrollToSection('productos')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Productos
+            </button>
+            <button
+              onClick={() => scrollToSection('contactos')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Contactos
+            </button>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t animate-fade-in">
+            <nav className="flex flex-col space-y-4">
+              <button
+                onClick={() => scrollToSection('inicio')}
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
+              >
+                Inicio
+              </button>
+              <button
+                onClick={() => scrollToSection('productos')}
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
+              >
+                Productos
+              </button>
+              <button
+                onClick={() => scrollToSection('contactos')}
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
+              >
+                Contactos
+              </button>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
