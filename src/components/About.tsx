@@ -5,8 +5,8 @@ const About = () => {
   const features = [
     {
       icon: Building2,
-      title: 'Experiencia Empresarial',
-      description: 'Especialistas en construcción de oficinas, centros comerciales y espacios corporativos.'
+      title: 'Diseño Arquitectónico',
+      description: 'Creamos diseños innovadores y funcionales que optimizan cada espacio corporativo.'
     },
     {
       icon: Users,
@@ -34,9 +34,9 @@ const About = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
           <p className="text-lg text-construction-gray-dark max-w-3xl mx-auto leading-relaxed">
-            OPLA es una empresa líder en construcción con más de 10 años de experiencia en el sector. 
-            Nos especializamos en proyectos empresariales y residenciales, combinando innovación, 
-            calidad y compromiso para crear espacios que transforman vidas y negocios.
+            OPLA es una empresa líder en diseño y construcción con más de 10 años de experiencia en el sector. 
+            Nos especializamos en proyectos empresariales y residenciales, combinando diseño innovador, 
+            calidad constructiva y compromiso para crear espacios que transforman vidas y negocios.
           </p>
         </div>
 

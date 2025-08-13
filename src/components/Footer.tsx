@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
-import oplaLogo from '@/assets/opla-logo.png';
+import oplaLogo from '@/assets/opla-logo-new.png';
 
 const Footer = () => {
   const contactInfo = [
@@ -39,7 +39,7 @@ const Footer = () => {
               <img src={oplaLogo} alt="OPLA" className="h-12 w-12" />
               <div>
                 <h3 className="text-2xl font-bold text-white">OPLA</h3>
-                <p className="text-gray-300 text-sm">Construcción de excelencia</p>
+                <p className="text-gray-300 text-sm">Diseño & Construcción</p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import oplaLogo from '@/assets/opla-logo.png';
+import oplaLogo from '@/assets/opla-logo-new.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +22,11 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <img src={oplaLogo} alt="OPLA" className="h-10 w-10" />
             <div className="hidden md:block">
-              <span className="text-lg font-bold text-construction-blue">OPLA</span>
-              <span className="text-sm text-muted-foreground ml-2">Arquitectura • Construcción • Para Empresas • Para Viviendas</span>
+              <span className="text-lg font-bold text-primary">OPLA</span>
+              <span className="text-sm text-muted-foreground ml-2">Diseño & Construcción • Para Empresas • Para Viviendas</span>
             </div>
             <div className="md:hidden">
-              <span className="text-lg font-bold text-construction-blue">OPLA</span>
+              <span className="text-lg font-bold text-primary">OPLA</span>
             </div>
           </div>
 
