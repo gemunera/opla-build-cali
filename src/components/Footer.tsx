@@ -1,13 +1,13 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
-import oplaLogo from '@/assets/opla-logo-new.png';
+import oplaLogo from '@/assets/opla-logo-official.png';
 
 const Footer = () => {
   const contactInfo = [
     {
       icon: Phone,
       label: 'Teléfono',
-      value: '+57 (2) 555-0123',
-      href: 'tel:+5725550123'
+      value: '+57 316 2260266',
+      href: 'tel:+573162260266'
     },
     {
       icon: MessageCircle,
@@ -18,13 +18,13 @@ const Footer = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contacto@opla.com.co',
-      href: 'mailto:contacto@opla.com.co'
+      value: 'oplaconstruccion@gmail.com',
+      href: 'mailto:oplaconstruccion@gmail.com'
     },
     {
       icon: MapPin,
       label: 'Dirección',
-      value: 'Calle 15 #10-45, Cali, Colombia',
+      value: 'Cra. 9 # 24-46, Cali, Colombia',
       href: 'https://maps.google.com'
     }
   ];

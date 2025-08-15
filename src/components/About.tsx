@@ -34,9 +34,9 @@ const About = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
           <p className="text-lg text-construction-gray-dark max-w-3xl mx-auto leading-relaxed">
-            OPLA es una empresa líder en diseño y construcción con más de 10 años de experiencia en el sector. 
-            Nos especializamos en proyectos empresariales y residenciales, combinando diseño innovador, 
-            calidad constructiva y compromiso para crear espacios que transforman vidas y negocios.
+            Con más de 10 años de experiencia en el sector de la construcción, en OPLA nos especializamos 
+            en el diseño y construcción de espacios empresariales y residenciales. Hemos desarrollado más de 
+            40 proyectos, públicos y privados, incluyendo diseño urbano y estructuración de proyectos en Estados Unidos.
           </p>
         </div>
 

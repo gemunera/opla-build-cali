@@ -36,9 +36,9 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 210 100% 45%;
 
-    /* Construction themed colors - Based on OPLA Logo */
+    /* Construction themed colors - Based on OPLA Official Logo */
     --construction-blue: 160 25% 35%; /* Verde del fondo del logo */
-    --construction-orange: 35 95% 63%; /* Naranja/amarillo del logo */
+    --construction-orange: 35 50% 65%; /* Dorado del logo (sin amarillo) */
     --construction-gray-light: 210 40% 93%;
     --construction-gray: 215 25% 27%;
     --construction-gray-dark: 160 15% 20%; /* Verde oscuro */

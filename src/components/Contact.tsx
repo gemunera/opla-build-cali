@@ -43,19 +43,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Teléfono',
-      content: '+57 (2) 555-0123',
-      href: 'tel:+5725550123'
+      content: '+57 316 2260266',
+      href: 'tel:+573162260266'
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contacto@opla.com.co',
-      href: 'mailto:contacto@opla.com.co'
+      content: 'oplaconstruccion@gmail.com',
+      href: 'mailto:oplaconstruccion@gmail.com'
     },
     {
       icon: MapPin,
       title: 'Dirección',
-      content: 'Calle 15 #10-45, Cali, Colombia',
+      content: 'Cra. 9 # 24-46, Cali, Colombia',
       href: 'https://maps.google.com'
     }
   ];

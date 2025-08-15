@@ -7,14 +7,14 @@ const Metrics = () => {
   const metrics = [
     {
       icon: Building,
-      value: 150,
+      value: 100,
       suffix: '+',
       label: 'Proyectos Realizados',
       description: 'Proyectos exitosos en construcción empresarial y residencial'
     },
     {
       icon: Ruler,
-      value: 25000,
+      value: 50000,
       suffix: 'm²',
       label: 'Área Total Construida',
       description: 'Metros cuadrados de construcción de alta calidad'
@@ -28,7 +28,7 @@ const Metrics = () => {
     },
     {
       icon: Users,
-      value: 500,
+      value: 300,
       suffix: '+',
       label: 'Clientes Satisfechos',
       description: 'Familias y empresas que confían en nosotros'
