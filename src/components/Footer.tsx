@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
-import oplaLogo from '@/assets/opla-logo-official.png';
+const oplaLogo = '/lovable-uploads/7842d3f6-153c-4cfa-b95e-686454c4fa1f.png';
 
 const Footer = () => {
   const contactInfo = [
