@@ -1,36 +1,28 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 const oplaLogo = '/lovable-uploads/2c07aea7-7eba-4206-960f-fba89033c0aa.png';
-
 const Footer = () => {
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: 'Teléfono',
-      value: '+57 316 2260266',
-      href: 'tel:+573162260266'
-    },
-    {
-      icon: MessageCircle,
-      label: 'WhatsApp',
-      value: '+57 316 2260266',
-      href: 'https://wa.me/573162260266'
-    },
-    {
-      icon: Mail,
-      label: 'Email',
-      value: 'oplaconstruccion@gmail.com',
-      href: 'mailto:oplaconstruccion@gmail.com'
-    },
-    {
-      icon: MapPin,
-      label: 'Dirección',
-      value: 'Cra. 9 # 24-46, Cali, Colombia',
-      href: 'https://maps.google.com'
-    }
-  ];
-
-  return (
-    <footer className="bg-construction-dark text-white py-16">
+  const contactInfo = [{
+    icon: Phone,
+    label: 'Teléfono',
+    value: '+57 316 2260266',
+    href: 'tel:+573162260266'
+  }, {
+    icon: MessageCircle,
+    label: 'WhatsApp',
+    value: '+57 316 2260266',
+    href: 'https://wa.me/573162260266'
+  }, {
+    icon: Mail,
+    label: 'Email',
+    value: 'oplaconstruccion@gmail.com',
+    href: 'mailto:oplaconstruccion@gmail.com'
+  }, {
+    icon: MapPin,
+    label: 'Dirección',
+    value: 'Cra. 9 # 24-46, Cali, Colombia',
+    href: 'https://maps.google.com'
+  }];
+  return <footer className="bg-construction-dark text-white py-16">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Logo and Brand */}
@@ -38,8 +30,9 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <img src={oplaLogo} alt="OPLA" className="h-24 w-24" />
               <div>
-                <h3 className="text-3xl font-bold text-white">OPLA</h3>
-                <p className="text-gray-300 text-base">Diseño & Construcción</p>
+                <h3 className="text-3xl font-bold text-white">
+              </h3>
+                <p className="text-gray-300 text-base">Diseño</p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
@@ -55,15 +48,8 @@ const Footer = () => {
             </h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => {
-                const Icon = info.icon;
-                return (
-                  <a
-                    key={index}
-                    href={info.href}
-                    target={info.href.startsWith('http') ? '_blank' : undefined}
-                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors group"
-                  >
+              const Icon = info.icon;
+              return <a key={index} href={info.href} target={info.href.startsWith('http') ? '_blank' : undefined} rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors group">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors">
                       <Icon className="h-4 w-4 text-white" />
                     </div>
@@ -73,9 +59,8 @@ const Footer = () => {
                         {info.value}
                       </p>
                     </div>
-                  </a>
-                );
-              })}
+                  </a>;
+            })}
             </div>
           </div>
 
@@ -85,18 +70,9 @@ const Footer = () => {
               Nuestros Servicios
             </h3>
             <ul className="space-y-3">
-              {[
-                'Construcción empresarial',
-                'Construcción residencial',
-                'Diseño arquitectónico',
-                'Gestión de proyectos',
-                'Consultoría en construcción',
-                'Mantenimiento y reformas'
-              ].map((service, index) => (
-                <li key={index} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+              {['Construcción empresarial', 'Construcción residencial', 'Diseño arquitectónico', 'Gestión de proyectos', 'Consultoría en construcción', 'Mantenimiento y reformas'].map((service, index) => <li key={index} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
                   • {service}
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
@@ -113,8 +89,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
