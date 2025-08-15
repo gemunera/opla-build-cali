@@ -32,7 +32,7 @@ const Footer = () => {
               <div>
                 <h3 className="text-3xl font-bold text-white">
               </h3>
-                <p className="text-gray-300 text-base">eño</p>
+                
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
