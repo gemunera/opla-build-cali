@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
-const oplaLogo = '/lovable-uploads/7842d3f6-153c-4cfa-b95e-686454c4fa1f.png';
+const oplaLogo = '/lovable-uploads/2c07aea7-7eba-4206-960f-fba89033c0aa.png';
 
 const Footer = () => {
   const contactInfo = [
