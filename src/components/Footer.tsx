@@ -28,7 +28,11 @@ const Footer = () => {
           {/* Logo and Brand */}
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <img src={oplaLogo} alt="OPLA" className="h-24 w-24" />
+              <img 
+                src={oplaLogo} 
+                alt="OPLA" 
+                className="h-28 w-28 object-contain rounded-lg bg-white/10 p-2" 
+              />
               <div>
                 <h3 className="text-3xl font-bold text-white">
               </h3>
