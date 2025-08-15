@@ -26,15 +26,14 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 lg:px-8 z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Construimos el{' '}
+            Espacios con{' '}
             <span className="text-transparent bg-gradient-primary bg-clip-text">
-              futuro
-            </span>{' '}
-            de tu empresa
+              alma
+            </span>
           </h1>
           <p className="text-xl text-gray-200 mb-8 leading-relaxed animate-slide-up">
-            Especialistas en construcción para empresas y viviendas en Cali. 
-            Calidad, experiencia y cumplimiento garantizado en cada proyecto.
+            Arquitectura pensada para sentir, vivir y soñar. Creamos más que estructuras: 
+            diseñamos experiencias que transforman la vida de quienes las habitan.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
             <Button

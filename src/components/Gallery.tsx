@@ -1,38 +1,39 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import officeImage from '@/assets/office-construction.jpg';
 import houseImage from '@/assets/house-construction.jpg';
 
 const Gallery = () => {
   const projects = [
     {
-      category: 'Construcción para Empresas',
-      projects: [
-        {
-          image: officeImage,
-          title: 'Centro Empresarial ModernoPlex',
-          description: 'Moderno edificio corporativo de 8 pisos con espacios de oficina de última generación y tecnología sostenible.'
-        },
-        {
-          image: officeImage,
-          title: 'Complejo Industrial TechHub',
-          description: 'Instalaciones industriales especializadas con infraestructura tecnológica avanzada para empresas del sector IT.'
-        }
-      ]
+      title: 'Diseño de oficinas',
+      image: officeImage,
+      description: 'Espacios de trabajo innovadores y funcionales que inspiran productividad y bienestar.'
     },
     {
-      category: 'Construcción de Viviendas',
-      projects: [
-        {
-          image: houseImage,
-          title: 'Conjunto Residencial Vista Verde',
-          description: 'Hermoso conjunto de 40 casas con diseño contemporáneo, zonas verdes y espacios recreativos familiares.'
-        },
-        {
-          image: houseImage,
-          title: 'Casas Campestres Los Robles',
-          description: 'Exclusivas casas campestres con amplios jardines, diseño ecológico y acabados de lujo en zona privilegiada.'
-        }
-      ]
+      title: 'Diseño y planos de casa',
+      image: houseImage,
+      description: 'Planos arquitectónicos personalizados que reflejan tu estilo de vida ideal.'
+    },
+    {
+      title: 'Construcción de viviendas',
+      image: houseImage,
+      description: 'Construcción integral de casas con los más altos estándares de calidad.'
+    },
+    {
+      title: 'Remodelación y adecuación de oficinas',
+      image: officeImage,
+      description: 'Transformamos espacios corporativos para optimizar funcionalidad y estética.'
+    },
+    {
+      title: 'Remodelación de casas y apartamentos',
+      image: houseImage,
+      description: 'Renovamos tu hogar con diseño contemporáneo y materiales de primera calidad.'
+    },
+    {
+      title: 'Brasil Ingeniería Estructural',
+      image: officeImage,
+      description: 'Servicios especializados en ingeniería estructural para proyectos internacionales.'
     }
   ];
 
@@ -49,38 +50,35 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
-          {projects.map((category, categoryIndex) => (
-            <div key={categoryIndex}>
-              <h3 className="text-2xl font-bold text-construction-dark mb-8 pl-4 border-l-4 border-primary">
-                {category.category}
-              </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {category.projects.map((project, projectIndex) => (
-                  <Card
-                    key={projectIndex}
-                    className="overflow-hidden shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-2"
-                  >
-                    <div className="relative h-64 overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                      <h4 className="absolute bottom-4 left-4 text-xl font-semibold text-white">
-                        {project.title}
-                      </h4>
-                    </div>
-                    <CardContent className="p-6">
-                      <p className="text-construction-gray-dark leading-relaxed">
-                        {project.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, projectIndex) => (
+            <Card
+              key={projectIndex}
+              className="overflow-hidden shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-2"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <h4 className="absolute bottom-4 left-4 text-xl font-semibold text-white">
+                  {project.title}
+                </h4>
               </div>
-            </div>
+              <CardContent className="p-6">
+                <p className="text-construction-gray-dark leading-relaxed mb-4">
+                  {project.description}
+                </p>
+                <Button 
+                  variant="outline" 
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                >
+                  Conocer más
+                </Button>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

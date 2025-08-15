@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
     >
       <MessageCircle className="h-6 w-6 group-hover:scale-110 transition-transform" />
       <div className="absolute -top-12 right-0 bg-construction-dark text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-        ¡Escríbenos!
+        Habla con nosotros por WhatsApp
       </div>
     </a>
   );
