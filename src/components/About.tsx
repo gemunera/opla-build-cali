@@ -8,7 +8,7 @@ const About = () => {
   }, {
     icon: Users,
     title: 'Proyectos Residenciales',
-    description: 'Construcción de viviendas modernas y funcionales para familias en Cali.'
+    description: 'Construcción de viviendas modernas y funcionales para familias.'
   }, {
     icon: Award,
     title: 'Calidad Garantizada',
