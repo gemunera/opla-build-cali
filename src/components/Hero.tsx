@@ -30,7 +30,7 @@ const Hero = () => {
               Contactar ahora
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollToSection('productos')} className="border-white text-white hover:bg-white hover:text-construction-dark">
+            <Button size="lg" variant="outline" onClick={() => scrollToSection('productos')} className="bg-white text-construction-dark border-white hover:bg-white/90">
               Ver proyectos
             </Button>
           </div>
