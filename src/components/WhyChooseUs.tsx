@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
     {
       icon: Clock,
       title: 'Experiencia Comprobada',
-      description: 'Más de 10 años construyendo proyectos exitosos para empresas y familias en Cali y sus alrededores.'
+      description: 'Contamos con profesionales con más de 15 años de experiencia en el área de la construcción, creando proyectos exitosos para empresas y familias en Cali y sus alrededores.'
     },
     {
       icon: Users,
