@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
     {
       icon: Award,
       title: 'Equipo Profesional',
-      description: 'Contamos con profesionales con más de 15 años de experiencia en el área de la construcción, creando proyectos exitosos para empresas y familias en Cali y sus alrededores.'
+      description: 'Contamos con arquitectos, ingenieros y constructores certificados con amplia experiencia en el sector.'
     }
   ];
 
