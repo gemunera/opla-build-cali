@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 lg:px-8 z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Arquitectura{' '}
+            Arquitectura con{' '}
             <span className="text-transparent bg-gradient-primary bg-clip-text">
               alma
             </span>
