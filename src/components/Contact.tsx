@@ -44,7 +44,7 @@ const Contact = () => {
     icon: WhatsAppIcon,
     title: <WhatsAppIcon className="h-5 w-5" />,
     content: '+57 316 2260266',
-    href: 'https://wa.me/573162260266'
+    href: 'https://web.whatsapp.com/send?phone=573162260266&text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20diseño%20y%20construcción.'
   }, {
     icon: Mail,
     title: 'Email',
@@ -113,7 +113,8 @@ const Contact = () => {
           <div className="space-y-6">
             {contactInfo.map((info, index) => {
             const Icon = info.icon;
-            return <Card key={index} className="shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
+            return <a key={index} href={info.href} target="_blank" rel="noopener noreferrer" className="block">
+                <Card className="shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
@@ -129,7 +130,8 @@ const Contact = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>;
+                </Card>
+              </a>;
           })}
           </div>
         </div>
