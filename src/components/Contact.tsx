@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,8 +40,8 @@ const Contact = () => {
     });
   };
   const contactInfo = [{
-    icon: MessageCircle,
-    title: <MessageCircle className="h-5 w-5" />,
+    icon: MessageSquare,
+    title: <MessageSquare className="h-5 w-5" />,
     content: '+57 316 2260266',
     href: 'https://wa.me/573162260266'
   }, {
