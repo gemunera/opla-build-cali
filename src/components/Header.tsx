@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-4">
-            <img src={oplaLogo} alt="OPLA" className="h-10 w-10" />
+            <img src={oplaLogo} alt="OPLA" className="h-12 w-12 p-1 bg-white rounded-lg shadow-lg border-2 border-primary/20" />
             <div className="hidden md:block">
               <span className="text-lg font-bold text-primary">OPLA</span>
               <span className="text-sm text-muted-foreground ml-2">Diseño & Construcción • Para Empresas • Para Viviendas</span>
