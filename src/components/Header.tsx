@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import oplaLogo from '@/assets/opla-logo-official.png';
+const oplaLogo = '/lovable-uploads/ba5b1bf2-20bf-4f54-a2dc-9e85014744e6.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

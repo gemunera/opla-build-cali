@@ -1,14 +1,9 @@
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
-const oplaLogo = '/lovable-uploads/2c07aea7-7eba-4206-960f-fba89033c0aa.png';
+import { Mail, MapPin, MessageCircle } from 'lucide-react';
+const oplaLogo = '/lovable-uploads/ba5b1bf2-20bf-4f54-a2dc-9e85014744e6.png';
 const Footer = () => {
   const contactInfo = [{
-    icon: Phone,
-    label: 'Teléfono',
-    value: '+57 316 2260266',
-    href: 'tel:+573162260266'
-  }, {
     icon: MessageCircle,
-    label: 'WhatsApp',
+    label: <MessageCircle className="h-4 w-4" />,
     value: '+57 316 2260266',
     href: 'https://wa.me/573162260266'
   }, {
@@ -54,7 +49,7 @@ const Footer = () => {
                       <Icon className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-400">{info.label}</p>
+                      <p className="text-sm text-gray-400">{typeof info.label === 'string' ? info.label : ''}</p>
                       <p className="text-gray-300 group-hover:text-white transition-colors">
                         {info.value}
                       </p>

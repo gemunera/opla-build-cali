@@ -6,34 +6,49 @@ import houseImage from '@/assets/house-construction.jpg';
 const Gallery = () => {
   const projects = [
     {
-      title: 'Diseño de oficinas',
-      image: officeImage,
-      description: 'Espacios de trabajo innovadores y funcionales que inspiran productividad y bienestar.'
-    },
-    {
-      title: 'Diseño y planos de casa',
+      title: 'Diseño de casas y apartamentos',
       image: houseImage,
       description: 'Planos arquitectónicos personalizados que reflejan tu estilo de vida ideal.'
     },
     {
-      title: 'Construcción de viviendas',
-      image: houseImage,
-      description: 'Construcción integral de casas con los más altos estándares de calidad.'
-    },
-    {
-      title: 'Remodelación y adecuación de oficinas',
+      title: 'Diseño comercial de oficinas y bodegas',
       image: officeImage,
-      description: 'Transformamos espacios corporativos para optimizar funcionalidad y estética.'
+      description: 'Espacios de trabajo innovadores y funcionales que inspiran productividad y bienestar.'
     },
     {
-      title: 'Remodelación de casas y apartamentos',
+      title: 'Diseño de planos constructivos',
       image: houseImage,
-      description: 'Renovamos tu hogar con diseño contemporáneo y materiales de primera calidad.'
+      description: 'Planos técnicos detallados para la construcción de tu proyecto.'
     },
     {
-      title: 'Brasil Ingeniería Estructural',
+      title: 'Construcción de casas y apartamentos',
+      image: houseImage,
+      description: 'Construcción integral de viviendas con los más altos estándares de calidad.'
+    },
+    {
+      title: 'Construcción de locales comerciales, oficinas y bodegas',
       image: officeImage,
-      description: 'Servicios especializados en ingeniería estructural para proyectos internacionales.'
+      description: 'Construcción especializada para espacios comerciales e industriales.'
+    },
+    {
+      title: 'Coordinación de proyectos',
+      image: officeImage,
+      description: 'Gestión integral y coordinación profesional de tu proyecto de construcción.'
+    },
+    {
+      title: 'Estructuración de proyectos',
+      image: houseImage,
+      description: 'Análisis y diseño estructural para garantizar la seguridad de tu construcción.'
+    },
+    {
+      title: 'Licencia de construcción y consultoría normativa urbana',
+      image: officeImage,
+      description: 'Asesoría completa en trámites y normativas para tu proyecto.'
+    },
+    {
+      title: 'Diseño paramétrico',
+      image: houseImage,
+      description: 'Diseño avanzado utilizando tecnología paramétrica para optimizar tu proyecto.'
     }
   ];
 

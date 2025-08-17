@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, MessageCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,14 +41,9 @@ const Contact = () => {
   };
   const contactInfo = [{
     icon: MessageCircle,
-    title: 'WhatsApp',
+    title: <MessageCircle className="h-5 w-5" />,
     content: '+57 316 2260266',
     href: 'https://wa.me/573162260266'
-  }, {
-    icon: Phone,
-    title: 'Teléfono',
-    content: '+57 316 2260266',
-    href: 'tel:+573162260266'
   }, {
     icon: Mail,
     title: 'Email',
@@ -120,10 +115,16 @@ const Contact = () => {
             return <Card key={index} className="shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      
+                      <div className="flex-shrink-0">
+                        <Icon className="h-8 w-8 text-primary" />
+                      </div>
                       <div className="flex-1">
-                        
-                        
+                        <h4 className="font-semibold text-construction-dark mb-1">
+                          {typeof info.title === 'string' ? info.title : ''}
+                        </h4>
+                        <p className="text-construction-gray-dark">
+                          {info.content}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
