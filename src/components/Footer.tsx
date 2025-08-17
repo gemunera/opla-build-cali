@@ -15,7 +15,7 @@ const Footer = () => {
     icon: MapPin,
     label: 'Dirección',
     value: 'Cra. 9 # 24-46, Cali, Colombia',
-    href: 'https://maps.google.com'
+    href: 'https://maps.google.com/maps?q=Cra.+9+%23+24-46,+Cali,+Colombia'
   }];
   return <footer className="bg-construction-dark text-white py-16">
       <div className="container mx-auto px-4 lg:px-8">
