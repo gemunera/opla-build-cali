@@ -54,7 +54,7 @@ const Contact = () => {
     icon: MapPin,
     title: 'Dirección',
     content: 'Cra. 9 # 24-46, Cali, Colombia',
-    href: 'https://maps.google.com'
+    href: 'https://maps.google.com/maps?q=Cra.+9+%23+24-46,+Cali,+Colombia'
   }];
   return <section id="contactos" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
