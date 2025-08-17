@@ -49,7 +49,7 @@ const Contact = () => {
     icon: Mail,
     title: 'Email',
     content: 'oplaconstruccion@gmail.com',
-    href: 'mailto:oplaconstruccion@gmail.com'
+    href: 'mailto:oplaconstruccion@gmail.com?subject=Consulta%20sobre%20servicios%20de%20diseño%20y%20construcción&body=Hola,%0D%0A%0D%0AMe%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20diseño%20y%20construcción.%0D%0A%0D%0AGracias.'
   }, {
     icon: MapPin,
     title: 'Dirección',
