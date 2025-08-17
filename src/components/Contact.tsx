@@ -28,11 +28,26 @@ const Contact = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+    
+    // Construir el enlace mailto con los datos del formulario
+    const subject = `Consulta de ${formData.nombre}`;
+    const body = `Nombre: ${formData.nombre}
+Email: ${formData.email}
+Teléfono: ${formData.telefono}
+
+Mensaje:
+${formData.mensaje}`;
+    
+    const mailtoLink = `mailto:oplaconstruccion@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Abrir cliente de correo
+    window.open(mailtoLink, '_self');
+    
     toast({
       title: "Mensaje enviado",
-      description: "Nos pondremos en contacto contigo pronto."
+      description: "Se ha abierto tu cliente de correo para enviar el mensaje."
     });
+    
     setFormData({
       nombre: '',
       email: '',
