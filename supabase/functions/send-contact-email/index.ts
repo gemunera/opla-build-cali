@@ -42,7 +42,7 @@ serve(async (req) => {
 
     const result = await resend.emails.send({
       from: "Opla Construcción <onboarding@resend.dev>",
-      to: ["oplaconstruccion@gmail.com"],
+      to: ["gloria.elena.munera.lopez@gmail.com"],
       subject,
       html,
       reply_to: email ? [email] : undefined,
