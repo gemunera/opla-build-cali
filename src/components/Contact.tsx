@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, MessageSquare } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/ui/whatsapp-icon';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
 const Contact = () => {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -26,28 +27,33 @@ const Contact = () => {
       [name]: value
     }));
   };
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Construir el enlace mailto con los datos del formulario
-    const subject = `Consulta de ${formData.nombre}`;
-    const body = `Nombre: ${formData.nombre}
-Email: ${formData.email}
-Teléfono: ${formData.telefono}
 
-Mensaje:
-${formData.mensaje}`;
-    
-    const mailtoLink = `mailto:oplaconstruccion@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Abrir cliente de correo
-    window.open(mailtoLink, '_self');
-    
-    toast({
-      title: "Mensaje enviado",
-      description: "Se ha abierto tu cliente de correo para enviar el mensaje."
+    const { error } = await supabase.functions.invoke('send-contact-email', {
+      body: {
+        nombre: formData.nombre,
+        email: formData.email,
+        telefono: formData.telefono,
+        mensaje: formData.mensaje,
+      },
     });
-    
+
+    if (error) {
+      console.error('Error enviando correo:', error);
+      toast({
+        title: 'Error al enviar',
+        description: 'No pudimos enviar tu mensaje. Inténtalo de nuevo.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    toast({
+      title: 'Mensaje enviado',
+      description: '¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.',
+    });
+
     setFormData({
       nombre: '',
       email: '',
