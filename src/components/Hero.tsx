@@ -24,7 +24,7 @@ const Hero = () => {
             Arquitectura con{' '}
             <span className="text-transparent bg-gradient-primary bg-clip-text">propósito</span>
           </h1>
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed animate-slide-up">Creamos espacios para vivir plenamente, no solo para habitar. Más que estructuras, diseñamos experiencias que transforman la vida de quienes las disfrutan.</p>
+          <p className="text-xl text-gray-200 mb-8 leading-relaxed animate-slide-up">Construimos espacios que transforman vidas y negocios. Contamos con profesionales con más de 15 años de experiencia, lo que nos convierte en tu aliado confiable para proyectos de construcción empresarial y residencial.</p>
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
             <Button size="lg" onClick={() => scrollToSection('contactos')} className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-construction group">
               Contactar ahora
