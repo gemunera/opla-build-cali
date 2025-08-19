@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from '@/components/LanguageSelector';
 const oplaLogo = '/lovable-uploads/6809c0d7-7ca3-473c-866c-efc9f47d9454.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,7 +24,7 @@ const Header = () => {
             <img src={oplaLogo} alt="OPLA" className="h-12 w-12" />
             <div className="hidden md:block">
               <span className="text-lg font-bold text-primary">OPLA</span>
-              <span className="text-sm text-muted-foreground ml-2">Diseño & Construcción • Para Empresas • Para Viviendas</span>
+              <span className="text-sm text-muted-foreground ml-2">{t('header.brand')}</span>
             </div>
             <div className="md:hidden">
               <span className="text-lg font-bold text-primary">OPLA</span>
@@ -31,14 +34,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('inicio')} className="text-foreground hover:text-primary transition-colors">
-              Inicio
+              {t('nav.inicio')}
             </button>
             <button onClick={() => scrollToSection('productos')} className="text-foreground hover:text-primary transition-colors">
-              Productos
+              {t('nav.productos')}
             </button>
             <button onClick={() => scrollToSection('contactos')} className="text-foreground hover:text-primary transition-colors">
-              Contactos
+              {t('nav.contactos')}
             </button>
+            <LanguageSelector />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -51,14 +55,17 @@ const Header = () => {
         {isMenuOpen && <div className="md:hidden py-4 border-t animate-fade-in">
             <nav className="flex flex-col space-y-4">
               <button onClick={() => scrollToSection('inicio')} className="text-left text-foreground hover:text-primary transition-colors py-2">
-                Inicio
+                {t('nav.inicio')}
               </button>
               <button onClick={() => scrollToSection('productos')} className="text-left text-foreground hover:text-primary transition-colors py-2">
-                Productos
+                {t('nav.productos')}
               </button>
               <button onClick={() => scrollToSection('contactos')} className="text-left text-foreground hover:text-primary transition-colors py-2">
-                Contactos
+                {t('nav.contactos')}
               </button>
+              <div className="pt-2">
+                <LanguageSelector />
+              </div>
             </nav>
           </div>}
       </div>

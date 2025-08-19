@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import heroImage from '@/assets/hero-construction.jpg';
 const Hero = () => {
+  const { t } = useLanguage();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,17 +23,17 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 lg:px-8 z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Arquitectura con{' '}
-            <span className="text-transparent bg-gradient-primary bg-clip-text">propósito</span>
+            {t('hero.title')}{' '}
+            <span className="text-transparent bg-gradient-primary bg-clip-text">{t('hero.titleHighlight')}</span>
           </h1>
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed animate-slide-up">Creamos espacios para vivir plenamente, no solo para habitar. Más que estructuras, diseñamos experiencias que transforman la vida de quienes las disfrutan.</p>
+          <p className="text-xl text-gray-200 mb-8 leading-relaxed animate-slide-up">{t('hero.subtitle')}</p>
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
             <Button size="lg" onClick={() => scrollToSection('contactos')} className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-construction group">
-              Contactar ahora
+              {t('hero.contactButton')}
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button size="lg" variant="outline" onClick={() => scrollToSection('productos')} className="bg-white text-construction-dark border-white hover:bg-white hover:text-construction-dark/90 hover:shadow-md transition-all duration-300">
-              Ver proyectos
+              {t('hero.projectsButton')}
             </Button>
           </div>
         </div>

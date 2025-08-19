@@ -1,37 +1,39 @@
 import { useState, useEffect } from 'react';
 import { Building, Ruler, CheckCircle, Users } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Metrics = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   const metrics = [
     {
       icon: Building,
       value: 100,
       suffix: '+',
-      label: 'Proyectos Realizados',
-      description: 'Proyectos exitosos en construcción empresarial y residencial'
+      label: t('metrics.projects'),
+      description: t('metrics.projectsDescription')
     },
     {
       icon: Ruler,
       value: 50000,
       suffix: 'm²',
-      label: 'Área Total Construida',
-      description: 'Metros cuadrados de construcción de alta calidad'
+      label: t('metrics.area'),
+      description: t('metrics.areaDescription')
     },
     {
       icon: CheckCircle,
       value: 100,
       suffix: '%',
-      label: 'Cobertura Completa',
-      description: 'Cobertura total en todas las fases del proyecto'
+      label: t('metrics.coverage'),
+      description: t('metrics.coverageDescription')
     },
     {
       icon: Users,
       value: 300,
       suffix: '+',
-      label: 'Clientes Satisfechos',
-      description: 'Familias y empresas que confían en nosotros'
+      label: t('metrics.clients'),
+      description: t('metrics.clientsDescription')
     }
   ];
 
@@ -104,11 +106,11 @@ const Metrics = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-construction-dark mb-4">
-            Nuestros números hablan
+            {t('metrics.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
           <p className="text-lg text-construction-gray-dark max-w-2xl mx-auto">
-            La confianza de nuestros clientes se refleja en estos resultados
+            {t('metrics.subtitle')}
           </p>
         </div>
 

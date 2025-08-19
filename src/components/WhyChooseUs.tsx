@@ -1,26 +1,29 @@
 import { Shield, Clock, Users, Award } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyChooseUs = () => {
+  const { t } = useLanguage();
+  
   const reasons = [
     {
       icon: Shield,
-      title: 'Calidad Garantizada',
-      description: 'Utilizamos materiales de primera calidad y seguimos estrictos controles de calidad en cada etapa del proyecto.'
+      title: t('whyChooseUs.reason1.title'),
+      description: t('whyChooseUs.reason1.description')
     },
     {
       icon: Clock,
-      title: 'Experiencia Comprobada',
-      description: 'Contamos con profesionales con más de 15 años de experiencia en el área de la construcción, creando proyectos exitosos para empresas y familias en Cali y sus alrededores.'
+      title: t('whyChooseUs.reason2.title'),
+      description: t('whyChooseUs.reason2.description')
     },
     {
       icon: Users,
-      title: 'Cumplimiento Total',
-      description: 'Entregamos todos nuestros proyectos en los tiempos acordados, respetando presupuestos y especificaciones.'
+      title: t('whyChooseUs.reason3.title'),
+      description: t('whyChooseUs.reason3.description')
     },
     {
       icon: Award,
-      title: 'Equipo Profesional',
-      description: 'Contamos con arquitectos, ingenieros y constructores certificados con amplia experiencia en el sector.'
+      title: t('whyChooseUs.reason4.title'),
+      description: t('whyChooseUs.reason4.description')
     }
   ];
 
@@ -29,12 +32,11 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ¿Por qué elegir OPLA?
+            {t('whyChooseUs.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Somos tu mejor opción en construcción por nuestra dedicación a la excelencia, 
-            innovación y compromiso con cada cliente.
+            {t('whyChooseUs.subtitle')}
           </p>
         </div>
 

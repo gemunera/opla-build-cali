@@ -6,8 +6,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, MessageSquare } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/ui/whatsapp-icon';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { supabase } from "@/integrations/supabase/client";
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -48,8 +50,8 @@ const Contact = () => {
     const correctAnswer = captcha.num1 + captcha.num2;
     if (parseInt(captcha.answer) !== correctAnswer) {
       toast({
-        title: 'Error en verificación',
-        description: 'Por favor resuelve correctamente la operación matemática.',
+        title: t('contact.verificationError'),
+        description: t('contact.captchaError'),
         variant: 'destructive',
       });
       return;
@@ -67,16 +69,16 @@ const Contact = () => {
     if (error) {
       console.error('Error enviando correo:', error);
       toast({
-        title: 'Error al enviar',
-        description: 'No pudimos enviar tu mensaje. Inténtalo de nuevo.',
+        title: t('contact.sendErrorTitle'),
+        description: t('contact.sendError'),
         variant: 'destructive',
       });
       return;
     }
 
     toast({
-      title: 'Mensaje enviado',
-      description: '¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.',
+      title: t('contact.sendSuccessTitle'),
+      description: t('contact.sendSuccess'),
     });
 
     setFormData({
@@ -109,11 +111,11 @@ const Contact = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-construction-dark mb-4">
-            Contactos en Cali
+            {t('contact.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
           <p className="text-lg text-construction-gray-dark max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? Contáctanos y te ayudaremos a hacerlo realidad.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -122,40 +124,40 @@ const Contact = () => {
           <Card className="shadow-card-custom">
             <CardHeader>
               <CardTitle className="text-2xl text-construction-dark">
-                Envíanos un mensaje
+                {t('contact.formTitle')}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="nombre" className="block text-sm font-medium text-construction-gray-dark mb-2">
-                    Nombre
+                    {t('contact.name')}
                   </label>
                   <Input id="nombre" name="nombre" type="text" required value={formData.nombre} onChange={handleInputChange} className="border-construction-gray focus:border-primary" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-construction-gray-dark mb-2">
-                    Email
+                    {t('contact.email')}
                   </label>
                   <Input id="email" name="email" type="email" required value={formData.email} onChange={handleInputChange} className="border-construction-gray focus:border-primary" />
                 </div>
                 <div>
                   <label htmlFor="telefono" className="block text-sm font-medium text-construction-gray-dark mb-2">
-                    Teléfono
+                    {t('contact.phone')}
                   </label>
                   <Input id="telefono" name="telefono" type="tel" required value={formData.telefono} onChange={handleInputChange} className="border-construction-gray focus:border-primary" />
                 </div>
                 <div>
                   <label htmlFor="mensaje" className="block text-sm font-medium text-construction-gray-dark mb-2">
-                    Inquietud o mensaje
+                    {t('contact.message')}
                   </label>
-                  <Textarea id="mensaje" name="mensaje" rows={4} required value={formData.mensaje} onChange={handleInputChange} className="border-construction-gray focus:border-primary" placeholder="Cuéntanos sobre tu proyecto..." />
+                  <Textarea id="mensaje" name="mensaje" rows={4} required value={formData.mensaje} onChange={handleInputChange} className="border-construction-gray focus:border-primary" placeholder={t('contact.messagePlaceholder')} />
                 </div>
                 
                 {/* Captcha Anti-Bot */}
                 <div className="bg-construction-light p-4 rounded-lg border border-construction-gray">
                   <label className="block text-sm font-medium text-construction-gray-dark mb-2">
-                    Verificación anti-robot: ¿Cuánto es {captcha.num1} + {captcha.num2}?
+                    {t('contact.captcha')} {captcha.num1} + {captcha.num2}?
                   </label>
                   <div className="flex items-center space-x-2">
                     <Input
@@ -173,12 +175,12 @@ const Contact = () => {
                       onClick={generateCaptcha}
                       className="text-xs"
                     >
-                      Nuevo
+                      {t('contact.newCaptcha')}
                     </Button>
                   </div>
                 </div>
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-construction" size="lg">
-                  Enviar mensaje
+                  {t('contact.sendMessage')}
                 </Button>
               </form>
             </CardContent>

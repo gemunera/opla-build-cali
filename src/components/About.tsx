@@ -1,31 +1,34 @@
 import { Building2, Users, Award, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 const About = () => {
+  const { t } = useLanguage();
+  
   const features = [{
     icon: Building2,
-    title: 'Diseño Arquitectónico',
-    description: 'Creamos diseños innovadores y funcionales que optimizan cada espacio corporativo.'
+    title: t('about.feature1.title'),
+    description: t('about.feature1.description')
   }, {
     icon: Users,
-    title: 'Proyectos Residenciales',
-    description: 'Construcción de viviendas modernas y funcionales para familias.'
+    title: t('about.feature2.title'),
+    description: t('about.feature2.description')
   }, {
     icon: Award,
-    title: 'Calidad Garantizada',
-    description: 'Utilizamos los mejores materiales y técnicas de construcción del mercado.'
+    title: t('about.feature3.title'),
+    description: t('about.feature3.description')
   }, {
     icon: Clock,
-    title: 'Entrega Puntual',
-    description: 'Cumplimos con los tiempos establecidos en cada proyecto sin comprometer la calidad.'
+    title: t('about.feature4.title'),
+    description: t('about.feature4.description')
   }];
   return <section className="py-20 bg-construction-gray-light">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-construction-dark mb-4">
-            Quiénes Somos
+            {t('about.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
-          <p className="text-lg text-construction-gray-dark max-w-3xl mx-auto leading-relaxed">En OPLA contamos con profesionales con más de 15 años de experiencia en el sector de la construcción. Nos especializamos en el diseño y construcción de espacios empresariales y residenciales. Hemos desarrollado más de 100 proyectos, tanto públicos como privados, incluyendo diseño urbano y estructuración de proyectos en Estados Unidos.</p>
+          <p className="text-lg text-construction-gray-dark max-w-3xl mx-auto leading-relaxed">{t('about.description')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

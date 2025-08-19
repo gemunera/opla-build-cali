@@ -1,6 +1,8 @@
 import { Mail, MapPin, MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 const oplaLogo = '/lovable-uploads/ba5b1bf2-20bf-4f54-a2dc-9e85014744e6.png';
 const Footer = () => {
+  const { t } = useLanguage();
   const contactInfo = [{
     icon: MessageCircle,
     label: <MessageCircle className="h-4 w-4" />,
@@ -25,14 +27,13 @@ const Footer = () => {
             <div className="flex flex-col items-center space-y-4">
               <img src={oplaLogo} alt="OPLA" className="h-40 w-40 object-contain" />
             </div>
-            <p className="text-gray-300 leading-relaxed">Construimos espacios que transforman vidas y negocios.
-Contamos con profesionales con más de 15 años de experiencia, lo que nos convierte en tu aliado confiable para proyectos de construcción empresarial y residencial.</p>
+            <p className="text-gray-300 leading-relaxed">{t('footer.description')}</p>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-white mb-4">
-              Contactos en Cali
+              {t('footer.contactTitle')}
             </h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => {
@@ -55,19 +56,19 @@ Contamos con profesionales con más de 15 años de experiencia, lo que nos convi
           {/* Services */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-white mb-4">
-              Nuestros Servicios
+              {t('footer.servicesTitle')}
             </h3>
             <ul className="space-y-3">
               {[
-                'Diseño de casas y apartamentos',
-                'Diseño comercial de oficinas y bodegas', 
-                'Diseño de planos constructivos',
-                'Construcción de casas y apartamentos',
-                'Construcción de locales comerciales, oficinas y bodegas',
-                'Coordinación de proyectos',
-                'Estructuración de proyectos',
-                'Licencia de construcción y consultoría normativa urbana',
-                'Diseño paramétrico'
+                t('gallery.project1.title'),
+                t('gallery.project2.title'), 
+                t('gallery.project3.title'),
+                t('gallery.project4.title'),
+                t('gallery.project5.title'),
+                t('gallery.project6.title'),
+                t('gallery.project7.title'),
+                t('gallery.project8.title'),
+                t('gallery.project9.title')
               ].map((service, index) => <li key={index} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
                   • {service}
                 </li>)}
@@ -79,10 +80,10 @@ Contamos con profesionales con más de 15 años de experiencia, lo que nos convi
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 OPLA - Todos los derechos reservados
+              {t('footer.rights')}
             </p>
             <p className="text-gray-400 text-sm">
-              Cali, Colombia • Construcción profesional desde 2014
+              {t('footer.location')}
             </p>
           </div>
         </div>

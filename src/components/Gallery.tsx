@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { useLanguage } from '@/contexts/LanguageContext';
 import officeImage from '@/assets/office-construction.jpg';
 import houseImage from '@/assets/house-construction.jpg';
 import heroImage from '@/assets/hero-construction.jpg';
@@ -10,60 +11,61 @@ import heroImage from '@/assets/hero-construction.jpg';
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   const projects = [
     {
-      title: 'Diseño de casas y apartamentos',
+      title: t('gallery.project1.title'),
       image: houseImage,
-      description: 'Planos arquitectónicos personalizados que reflejan tu estilo de vida ideal. Trabajamos contigo para crear espacios que se adapten a tus necesidades específicas, considerando la funcionalidad, estética y sostenibilidad. Nuestros diseños incluyen distribución óptima de espacios, iluminación natural, ventilación cruzada y selección de materiales de alta calidad.',
+      description: t('gallery.project1.description'),
       gallery: [houseImage, heroImage, officeImage]
     },
     {
-      title: 'Diseño comercial de oficinas y bodegas',
+      title: t('gallery.project2.title'),
       image: officeImage,
-      description: 'Espacios de trabajo innovadores y funcionales que inspiran productividad y bienestar. Diseñamos oficinas modernas que promueven la colaboración, creatividad y eficiencia. Incluimos áreas de trabajo flexibles, zonas de descanso, salas de reuniones y espacios verdes que mejoran el ambiente laboral.',
+      description: t('gallery.project2.description'),
       gallery: [officeImage, houseImage, heroImage]
     },
     {
-      title: 'Diseño de planos constructivos',
+      title: t('gallery.project3.title'),
       image: houseImage,
-      description: 'Planos técnicos detallados para la construcción de tu proyecto. Elaboramos documentos constructivos completos que incluyen plantas arquitectónicas, cortes, fachadas, detalles constructivos y especificaciones técnicas. Todos nuestros planos cumplen con la normativa vigente y facilitan el proceso de construcción.',
+      description: t('gallery.project3.description'),
       gallery: [houseImage, officeImage, heroImage]
     },
     {
-      title: 'Construcción de casas y apartamentos',
+      title: t('gallery.project4.title'),
       image: houseImage,
-      description: 'Construcción integral de viviendas con los más altos estándares de calidad. Manejamos todo el proceso constructivo desde los cimientos hasta los acabados finales, utilizando materiales de primera calidad y técnicas modernas. Garantizamos entregas puntuales y construcciones duraderas.',
+      description: t('gallery.project4.description'),
       gallery: [houseImage, heroImage, officeImage]
     },
     {
-      title: 'Construcción de locales comerciales, oficinas y bodegas',
+      title: t('gallery.project5.title'),
       image: officeImage,
-      description: 'Construcción especializada para espacios comerciales e industriales. Desarrollamos proyectos que optimizan la operación comercial, considerando flujos de trabajo, seguridad industrial, accesibilidad y normativas específicas. Especializados en construcción rápida y eficiente.',
+      description: t('gallery.project5.description'),
       gallery: [officeImage, heroImage, houseImage]
     },
     {
-      title: 'Coordinación de proyectos',
+      title: t('gallery.project6.title'),
       image: officeImage,
-      description: 'Gestión integral y coordinación profesional de tu proyecto de construcción. Nos encargamos de planificar, supervisar y coordinar todas las fases del proyecto, desde el diseño hasta la entrega final. Incluye control de calidad, tiempos, presupuestos y comunicación constante con el cliente.',
+      description: t('gallery.project6.description'),
       gallery: [officeImage, houseImage, heroImage]
     },
     {
-      title: 'Estructuración de proyectos',
+      title: t('gallery.project7.title'),
       image: houseImage,
-      description: 'Análisis y diseño estructural para garantizar la seguridad de tu construcción. Realizamos estudios de suelos, cálculos estructurales, diseño de cimentaciones y sistemas de soporte. Trabajamos con ingenieros especializados para asegurar la estabilidad y durabilidad de la estructura.',
+      description: t('gallery.project7.description'),
       gallery: [houseImage, officeImage, heroImage]
     },
     {
-      title: 'Licencia de construcción y consultoría normativa urbana',
+      title: t('gallery.project8.title'),
       image: officeImage,
-      description: 'Asesoría completa en trámites y normativas para tu proyecto. Te acompañamos en todo el proceso legal y administrativo, incluyendo licencias de construcción, permisos municipales, estudios de impacto y cumplimiento de normativas urbanas. Garantizamos que tu proyecto cumpla con todos los requerimientos legales.',
+      description: t('gallery.project8.description'),
       gallery: [officeImage, heroImage, houseImage]
     },
     {
-      title: 'Diseño paramétrico',
+      title: t('gallery.project9.title'),
       image: houseImage,
-      description: 'Diseño avanzado utilizando tecnología paramétrica para optimizar tu proyecto. Empleamos software especializado y algoritmos de diseño para crear soluciones arquitectónicas innovadoras y eficientes. Permite explorar múltiples opciones de diseño y optimizar aspectos como iluminación, ventilación y uso de materiales.',
+      description: t('gallery.project9.description'),
       gallery: [houseImage, heroImage, officeImage]
     }
   ];
@@ -78,11 +80,11 @@ const Gallery = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-construction-dark mb-4">
-            Nuestros Proyectos
+            {t('gallery.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto mb-6"></div>
           <p className="text-lg text-construction-gray-dark max-w-2xl mx-auto">
-            Descubre algunos de nuestros proyectos más destacados en construcción empresarial y residencial
+            {t('gallery.subtitle')}
           </p>
         </div>
 
@@ -112,7 +114,7 @@ const Gallery = () => {
                   className="w-full border-primary text-primary hover:bg-primary hover:text-white mt-auto"
                   onClick={() => openModal(project)}
                 >
-                  Conocer más
+                  {t('gallery.knowMore')}
                 </Button>
               </CardContent>
             </Card>
@@ -154,7 +156,7 @@ const Gallery = () => {
                 {/* Descripción detallada */}
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-construction-dark mb-4">
-                    Descripción del Servicio
+                    {t('gallery.serviceDescription')}
                   </h3>
                   <p className="text-construction-gray-dark leading-relaxed">
                     {selectedProject.description}
@@ -170,7 +172,7 @@ const Gallery = () => {
                       document.getElementById('contactos')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                   >
-                    Solicitar cotización
+                    {t('gallery.requestQuote')}
                   </Button>
                 </div>
               </div>
