@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,6 +14,20 @@ const Contact = () => {
     telefono: '',
     mensaje: ''
   });
+  
+  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: '' });
+  
+  // Generate new captcha
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    setCaptcha({ num1, num2, answer: '' });
+  };
+
+  // Initialize captcha on component mount
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
   const {
     toast
   } = useToast();
@@ -29,6 +43,17 @@ const Contact = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Verify captcha
+    const correctAnswer = captcha.num1 + captcha.num2;
+    if (parseInt(captcha.answer) !== correctAnswer) {
+      toast({
+        title: 'Error en verificación',
+        description: 'Por favor resuelve correctamente la operación matemática.',
+        variant: 'destructive',
+      });
+      return;
+    }
 
     const { error } = await supabase.functions.invoke('send-contact-email', {
       body: {
@@ -60,6 +85,9 @@ const Contact = () => {
       telefono: '',
       mensaje: ''
     });
+    
+    // Generate new captcha after successful submission
+    generateCaptcha();
   };
   const contactInfo = [{
     icon: WhatsAppIcon,
@@ -122,6 +150,32 @@ const Contact = () => {
                     Inquietud o mensaje
                   </label>
                   <Textarea id="mensaje" name="mensaje" rows={4} required value={formData.mensaje} onChange={handleInputChange} className="border-construction-gray focus:border-primary" placeholder="Cuéntanos sobre tu proyecto..." />
+                </div>
+                
+                {/* Captcha Anti-Bot */}
+                <div className="bg-construction-light p-4 rounded-lg border border-construction-gray">
+                  <label className="block text-sm font-medium text-construction-gray-dark mb-2">
+                    Verificación anti-robot: ¿Cuánto es {captcha.num1} + {captcha.num2}?
+                  </label>
+                  <div className="flex items-center space-x-2">
+                    <Input
+                      type="number"
+                      required
+                      value={captcha.answer}
+                      onChange={(e) => setCaptcha(prev => ({ ...prev, answer: e.target.value }))}
+                      className="w-20 border-construction-gray focus:border-primary"
+                      placeholder="?"
+                    />
+                    <Button 
+                      type="button" 
+                      variant="outline" 
+                      size="sm"
+                      onClick={generateCaptcha}
+                      className="text-xs"
+                    >
+                      Nuevo
+                    </Button>
+                  </div>
                 </div>
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-construction" size="lg">
                   Enviar mensaje
