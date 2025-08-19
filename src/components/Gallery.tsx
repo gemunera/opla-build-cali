@@ -90,7 +90,7 @@ const Gallery = () => {
           {projects.map((project, projectIndex) => (
             <Card
               key={projectIndex}
-              className="overflow-hidden shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-2"
+              className="overflow-hidden shadow-card-custom hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -103,13 +103,13 @@ const Gallery = () => {
                   {project.title}
                 </h4>
               </div>
-              <CardContent className="p-6">
-                <p className="text-construction-gray-dark leading-relaxed mb-4">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <p className="text-construction-gray-dark leading-relaxed mb-4 flex-grow">
                   {project.description}
                 </p>
                 <Button 
                   variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white mt-auto"
                   onClick={() => openModal(project)}
                 >
                   Conocer más
