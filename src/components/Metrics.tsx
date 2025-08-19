@@ -38,8 +38,9 @@ const Metrics = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
+          observer.disconnect(); // Desconecta después de activarse una vez
         }
       },
       { threshold: 0.1 }
@@ -51,23 +52,28 @@ const Metrics = () => {
     }
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
+      observer.disconnect();
     };
-  }, []);
+  }, [isVisible]);
 
   const CountUp = ({ end, suffix = '', duration = 2000 }: { end: number; suffix?: string; duration?: number }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-      if (!isVisible) return;
+      if (!isVisible) {
+        setCount(0);
+        return;
+      }
 
+      let animationFrameId: number;
       let startTime: number;
       const startValue = 0;
       const endValue = end;
+      let isAnimating = true;
 
       const updateCount = (timestamp: number) => {
+        if (!isAnimating) return;
+        
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / duration, 1);
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
@@ -75,12 +81,19 @@ const Metrics = () => {
         
         setCount(currentCount);
 
-        if (progress < 1) {
-          requestAnimationFrame(updateCount);
+        if (progress < 1 && isAnimating) {
+          animationFrameId = requestAnimationFrame(updateCount);
         }
       };
 
-      requestAnimationFrame(updateCount);
+      animationFrameId = requestAnimationFrame(updateCount);
+
+      return () => {
+        isAnimating = false;
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+        }
+      };
     }, [isVisible, end, duration]);
 
     return <span>{count.toLocaleString()}{suffix}</span>;
