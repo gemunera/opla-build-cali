@@ -58,7 +58,17 @@ Contamos con profesionales con más de 15 años de experiencia, lo que nos convi
               Nuestros Servicios
             </h3>
             <ul className="space-y-3">
-              {['Construcción empresarial', 'Construcción residencial', 'Diseño comercial de oficinas y bodegas', 'Gestión de proyectos', 'Consultoría en construcción', 'Mantenimiento y reformas'].map((service, index) => <li key={index} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+              {[
+                'Diseño de casas y apartamentos',
+                'Diseño comercial de oficinas y bodegas', 
+                'Diseño de planos constructivos',
+                'Construcción de casas y apartamentos',
+                'Construcción de locales comerciales, oficinas y bodegas',
+                'Coordinación de proyectos',
+                'Estructuración de proyectos',
+                'Licencia de construcción y consultoría normativa urbana',
+                'Diseño paramétrico'
+              ].map((service, index) => <li key={index} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
                   • {service}
                 </li>)}
             </ul>
