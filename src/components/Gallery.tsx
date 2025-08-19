@@ -1,56 +1,77 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import officeImage from '@/assets/office-construction.jpg';
 import houseImage from '@/assets/house-construction.jpg';
+import heroImage from '@/assets/hero-construction.jpg';
 
 const Gallery = () => {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const projects = [
     {
       title: 'Diseño de casas y apartamentos',
       image: houseImage,
-      description: 'Planos arquitectónicos personalizados que reflejan tu estilo de vida ideal.'
+      description: 'Planos arquitectónicos personalizados que reflejan tu estilo de vida ideal. Trabajamos contigo para crear espacios que se adapten a tus necesidades específicas, considerando la funcionalidad, estética y sostenibilidad. Nuestros diseños incluyen distribución óptima de espacios, iluminación natural, ventilación cruzada y selección de materiales de alta calidad.',
+      gallery: [houseImage, heroImage, officeImage]
     },
     {
       title: 'Diseño comercial de oficinas y bodegas',
       image: officeImage,
-      description: 'Espacios de trabajo innovadores y funcionales que inspiran productividad y bienestar.'
+      description: 'Espacios de trabajo innovadores y funcionales que inspiran productividad y bienestar. Diseñamos oficinas modernas que promueven la colaboración, creatividad y eficiencia. Incluimos áreas de trabajo flexibles, zonas de descanso, salas de reuniones y espacios verdes que mejoran el ambiente laboral.',
+      gallery: [officeImage, houseImage, heroImage]
     },
     {
       title: 'Diseño de planos constructivos',
       image: houseImage,
-      description: 'Planos técnicos detallados para la construcción de tu proyecto.'
+      description: 'Planos técnicos detallados para la construcción de tu proyecto. Elaboramos documentos constructivos completos que incluyen plantas arquitectónicas, cortes, fachadas, detalles constructivos y especificaciones técnicas. Todos nuestros planos cumplen con la normativa vigente y facilitan el proceso de construcción.',
+      gallery: [houseImage, officeImage, heroImage]
     },
     {
       title: 'Construcción de casas y apartamentos',
       image: houseImage,
-      description: 'Construcción integral de viviendas con los más altos estándares de calidad.'
+      description: 'Construcción integral de viviendas con los más altos estándares de calidad. Manejamos todo el proceso constructivo desde los cimientos hasta los acabados finales, utilizando materiales de primera calidad y técnicas modernas. Garantizamos entregas puntuales y construcciones duraderas.',
+      gallery: [houseImage, heroImage, officeImage]
     },
     {
       title: 'Construcción de locales comerciales, oficinas y bodegas',
       image: officeImage,
-      description: 'Construcción especializada para espacios comerciales e industriales.'
+      description: 'Construcción especializada para espacios comerciales e industriales. Desarrollamos proyectos que optimizan la operación comercial, considerando flujos de trabajo, seguridad industrial, accesibilidad y normativas específicas. Especializados en construcción rápida y eficiente.',
+      gallery: [officeImage, heroImage, houseImage]
     },
     {
       title: 'Coordinación de proyectos',
       image: officeImage,
-      description: 'Gestión integral y coordinación profesional de tu proyecto de construcción.'
+      description: 'Gestión integral y coordinación profesional de tu proyecto de construcción. Nos encargamos de planificar, supervisar y coordinar todas las fases del proyecto, desde el diseño hasta la entrega final. Incluye control de calidad, tiempos, presupuestos y comunicación constante con el cliente.',
+      gallery: [officeImage, houseImage, heroImage]
     },
     {
       title: 'Estructuración de proyectos',
       image: houseImage,
-      description: 'Análisis y diseño estructural para garantizar la seguridad de tu construcción.'
+      description: 'Análisis y diseño estructural para garantizar la seguridad de tu construcción. Realizamos estudios de suelos, cálculos estructurales, diseño de cimentaciones y sistemas de soporte. Trabajamos con ingenieros especializados para asegurar la estabilidad y durabilidad de la estructura.',
+      gallery: [houseImage, officeImage, heroImage]
     },
     {
       title: 'Licencia de construcción y consultoría normativa urbana',
       image: officeImage,
-      description: 'Asesoría completa en trámites y normativas para tu proyecto.'
+      description: 'Asesoría completa en trámites y normativas para tu proyecto. Te acompañamos en todo el proceso legal y administrativo, incluyendo licencias de construcción, permisos municipales, estudios de impacto y cumplimiento de normativas urbanas. Garantizamos que tu proyecto cumpla con todos los requerimientos legales.',
+      gallery: [officeImage, heroImage, houseImage]
     },
     {
       title: 'Diseño paramétrico',
       image: houseImage,
-      description: 'Diseño avanzado utilizando tecnología paramétrica para optimizar tu proyecto.'
+      description: 'Diseño avanzado utilizando tecnología paramétrica para optimizar tu proyecto. Empleamos software especializado y algoritmos de diseño para crear soluciones arquitectónicas innovadoras y eficientes. Permite explorar múltiples opciones de diseño y optimizar aspectos como iluminación, ventilación y uso de materiales.',
+      gallery: [houseImage, heroImage, officeImage]
     }
   ];
+
+  const openModal = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   return (
     <section id="productos" className="py-20 bg-background">
@@ -89,6 +110,7 @@ const Gallery = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  onClick={() => openModal(project)}
                 >
                   Conocer más
                 </Button>
@@ -96,6 +118,65 @@ const Gallery = () => {
             </Card>
           ))}
         </div>
+
+        {/* Modal con carrusel */}
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-construction-dark">
+                {selectedProject?.title}
+              </DialogTitle>
+            </DialogHeader>
+            
+            {selectedProject && (
+              <div className="space-y-6">
+                {/* Carrusel de imágenes */}
+                <div className="relative">
+                  <Carousel className="w-full">
+                    <CarouselContent>
+                      {selectedProject.gallery.map((image: string, index: number) => (
+                        <CarouselItem key={index}>
+                          <div className="aspect-video overflow-hidden rounded-lg">
+                            <img
+                              src={image}
+                              alt={`${selectedProject.title} - Imagen ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
+                </div>
+
+                {/* Descripción detallada */}
+                <div className="prose max-w-none">
+                  <h3 className="text-xl font-semibold text-construction-dark mb-4">
+                    Descripción del Servicio
+                  </h3>
+                  <p className="text-construction-gray-dark leading-relaxed">
+                    {selectedProject.description}
+                  </p>
+                </div>
+
+                {/* Botón de contacto */}
+                <div className="flex justify-center pt-4">
+                  <Button 
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-construction"
+                    onClick={() => {
+                      setIsModalOpen(false);
+                      document.getElementById('contactos')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    Solicitar cotización
+                  </Button>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
