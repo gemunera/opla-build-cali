@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,6 +14,20 @@ const Contact = () => {
     telefono: '',
     mensaje: ''
   });
+
+  // Bot protection - Simple math captcha
+  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: '' });
+  
+  // Generate random captcha when component loads
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    setCaptcha({ num1, num2, answer: '' });
+  };
   const {
     toast
   } = useToast();
@@ -22,13 +36,30 @@ const Contact = () => {
       name,
       value
     } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    
+    if (name === 'captchaAnswer') {
+      setCaptcha(prev => ({ ...prev, answer: value }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate captcha
+    const correctAnswer = captcha.num1 + captcha.num2;
+    if (parseInt(captcha.answer) !== correctAnswer) {
+      toast({
+        title: 'Verificación fallida',
+        description: 'Por favor resuelve correctamente la operación matemática.',
+        variant: 'destructive',
+      });
+      generateCaptcha(); // Generate new captcha
+      return;
+    }
 
     const { error } = await supabase.functions.invoke('send-contact-email', {
       body: {
@@ -60,6 +91,7 @@ const Contact = () => {
       telefono: '',
       mensaje: ''
     });
+    generateCaptcha(); // Generate new captcha after successful submit
   };
   const contactInfo = [{
     icon: WhatsAppIcon,
@@ -122,6 +154,26 @@ const Contact = () => {
                     Inquietud o mensaje
                   </label>
                   <Textarea id="mensaje" name="mensaje" rows={4} required value={formData.mensaje} onChange={handleInputChange} className="border-construction-gray focus:border-primary" placeholder="Cuéntanos sobre tu proyecto..." />
+                </div>
+                
+                {/* Bot Protection - Math Captcha */}
+                <div className="p-4 bg-construction-gray-light/20 rounded-lg border">
+                  <label htmlFor="captchaAnswer" className="block text-sm font-medium text-construction-gray-dark mb-2">
+                    Verificación anti-robot: ¿Cuánto es {captcha.num1} + {captcha.num2}?
+                  </label>
+                  <Input 
+                    id="captchaAnswer" 
+                    name="captchaAnswer" 
+                    type="number" 
+                    required 
+                    value={captcha.answer} 
+                    onChange={handleInputChange} 
+                    className="border-construction-gray focus:border-primary max-w-24"
+                    placeholder="?"
+                  />
+                  <p className="text-xs text-construction-gray-dark mt-1">
+                    Resuelve esta simple operación para demostrar que no eres un robot
+                  </p>
                 </div>
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-construction" size="lg">
                   Enviar mensaje
