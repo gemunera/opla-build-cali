@@ -25,10 +25,7 @@ const Footer = () => {
             <div className="flex flex-col items-center space-y-4">
               <img src={oplaLogo} alt="OPLA" className="h-40 w-40 object-contain" />
             </div>
-            <p className="text-gray-300 leading-relaxed">
-              Construimos espacios que transforman vidas y negocios. Con más de 10 años de experiencia, 
-              somos tu aliado confiable en proyectos de construcción empresarial y residencial.
-            </p>
+            <p className="text-gray-300 leading-relaxed">C</p>
           </div>
 
           {/* Contact Information */}
