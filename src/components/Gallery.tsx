@@ -278,6 +278,40 @@ const Gallery = () => {
                   </div>
                 </div>
 
+                {/* Quinto proyecto: Vivienda Edward Castillo */}
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-construction-dark">
+                    Vivienda Edward Castillo
+                  </h3>
+                  <p className="text-lg text-construction-gray-dark leading-relaxed">
+                    Proyecto residencial unifamiliar que combina diseño contemporáneo con funcionalidad. Esta vivienda se caracteriza por su arquitectura minimalista, espacios interiores amplios y bien iluminados, cocina moderna integrada al área social, y fachada con elementos de madera que aportan calidez al diseño. El proyecto incluye optimización de espacios y acabados de alta calidad, creando un hogar confortable y estéticamente atractivo para la familia.
+                  </p>
+                  <div className="relative">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {[
+                          '/lovable-uploads/a15298d1-f0f6-4c72-951f-1c30633ee370.png',
+                          '/lovable-uploads/0ac60b32-17d3-43b9-a2d2-0c5cca6a555f.png',
+                          '/lovable-uploads/310b8617-f29c-44dc-918a-44f3b61d94b4.png',
+                          '/lovable-uploads/a429a50a-be25-4f01-a32e-97cc4b72c375.png'
+                        ].map((image: string, index: number) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={image}
+                                alt={`Vivienda Edward Castillo - Imagen ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  </div>
+                </div>
+
                 {/* Descripción detallada */}
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-construction-dark mb-4">
