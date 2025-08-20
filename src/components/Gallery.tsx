@@ -243,6 +243,41 @@ const Gallery = () => {
                   </div>
                 </div>
 
+                {/* Cuarto proyecto: Diseño zona húmeda las Mercedes */}
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-construction-dark">
+                    Diseño zona húmeda las Mercedes
+                  </h3>
+                  <p className="text-lg text-construction-gray-dark leading-relaxed">
+                    Proyecto de diseño integral de zona húmeda de lujo que combina elementos arquitectónicos curvos y orgánicos con tecnología de punta. Esta obra se caracteriza por su piscina de diseño serpenteante con jacuzzi integrado, áreas de spa interiores con acabados en mosaico, iluminación LED perimetral y paisajismo tropical. El diseño maximiza la experiencia sensorial y el bienestar, creando un oasis privado de relajación y entretenimiento.
+                  </p>
+                  <div className="relative">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {[
+                          '/lovable-uploads/79b25a4e-c126-491a-9946-c41118b6705f.png',
+                          '/lovable-uploads/a88cb4bd-391a-4f98-8db4-9aa824e3774b.png',
+                          '/lovable-uploads/34ce2885-b17b-4d7a-8832-8dba07fe545b.png',
+                          '/lovable-uploads/7117a904-df7a-4afc-824a-4ab0ca019e5c.png',
+                          '/lovable-uploads/19882f85-23ae-419b-9270-826cc50759db.png'
+                        ].map((image: string, index: number) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={image}
+                                alt={`Diseño zona húmeda las Mercedes - Imagen ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  </div>
+                </div>
+
                 {/* Descripción detallada */}
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-construction-dark mb-4">
