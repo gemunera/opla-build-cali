@@ -144,26 +144,70 @@ const Gallery = () => {
             </DialogHeader>
             
             {selectedProject && (
-              <div className="space-y-6">
-                {/* Carrusel de imágenes */}
-                <div className="relative">
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {selectedProject.gallery?.map((image: string, index: number) => (
-                        <CarouselItem key={index}>
-                          <div className="aspect-video overflow-hidden rounded-lg">
-                            <img
-                              src={image}
-                              alt={`${selectedProject.title} - Imagen ${index + 1}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-4" />
-                    <CarouselNext className="right-4" />
-                  </Carousel>
+              <div className="space-y-8">
+                {/* Primer proyecto: Vivienda Multifamiliar San Mateo */}
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-construction-dark">
+                    Vivienda Multifamiliar San Mateo
+                  </h3>
+                  <div className="relative">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {[
+                          '/lovable-uploads/a0231876-44ff-404e-89f9-4a16ce9a1136.png',
+                          '/lovable-uploads/05b466a7-7e69-4b83-9839-aa10a6b3aba8.png',
+                          '/lovable-uploads/8af2e020-6417-42c4-bb4c-8abfdf7a18b7.png',
+                          '/lovable-uploads/c4eb8b3b-fcae-40f1-a097-5baf617bbd0e.png',
+                          '/lovable-uploads/f85ef43e-c33e-4ea6-9622-71c12f29c5b4.png',
+                          '/lovable-uploads/d1188f14-5216-4585-8a90-9c9be22cb36b.png'
+                        ].map((image: string, index: number) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={image}
+                                alt={`Vivienda Multifamiliar San Mateo - Imagen ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  </div>
+                </div>
+
+                {/* Segundo proyecto: Zona Húmeda de Pance – Casa 29 */}
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-construction-dark">
+                    Zona Húmeda de Pance – Casa 29
+                  </h3>
+                  <div className="relative">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {[
+                          '/lovable-uploads/b365ec34-d208-4ea0-b1dc-6915a503ccea.png',
+                          '/lovable-uploads/6eadfce8-32d3-48eb-aed2-8b990d1e503c.png',
+                          '/lovable-uploads/2f97a21d-a5a5-42ca-8392-94a9a6aab462.png',
+                          '/lovable-uploads/d3344449-6ddb-40ef-af52-794a313b4888.png',
+                          '/lovable-uploads/612d311e-bccd-4607-801b-70446a3feff5.png'
+                        ].map((image: string, index: number) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={image}
+                                alt={`Zona Húmeda de Pance – Casa 29 - Imagen ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  </div>
                 </div>
 
                 {/* Descripción detallada */}
