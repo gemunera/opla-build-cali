@@ -210,6 +210,39 @@ const Gallery = () => {
                   </div>
                 </div>
 
+                {/* Tercer proyecto: Zona Húmeda Familia Cifuentes */}
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-construction-dark">
+                    Zona Húmeda Familia Cifuentes
+                  </h3>
+                  <div className="relative">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {[
+                          '/lovable-uploads/e6624fef-2972-4ab4-ae4e-cc63006c8df4.png',
+                          '/lovable-uploads/0c441a8a-bd41-41c1-bcf5-8d61093064c1.png',
+                          '/lovable-uploads/aa785578-c4f2-4e98-80e6-c3fb65710e87.png',
+                          '/lovable-uploads/d814aabc-bc34-469b-8026-cae90d597a60.png',
+                          '/lovable-uploads/5014029d-c4e0-45e2-acf2-82b351f619ef.png',
+                          '/lovable-uploads/f6fbf69e-186f-482f-8ce1-9f67596a591b.png'
+                        ].map((image: string, index: number) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={image}
+                                alt={`Zona Húmeda Familia Cifuentes - Imagen ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  </div>
+                </div>
+
                 {/* Descripción detallada */}
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-construction-dark mb-4">
