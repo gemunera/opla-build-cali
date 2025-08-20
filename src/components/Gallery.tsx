@@ -157,27 +157,40 @@ const Gallery = () => {
             
             {selectedProject && (
               <div className="space-y-8">
-                {/* Primer proyecto: Vivienda Multifamiliar San Mateo */}
+                {/* Proyecto: CAF Alberto Galindo */}
                 <div className="space-y-6">
+                  <div className="bg-construction-light p-6 rounded-lg border-l-4 border-primary">
+                    <h3 className="text-xl font-semibold text-construction-dark mb-4">
+                      CAF Alberto Galindo
+                    </h3>
+                    <div className="space-y-2 text-construction-gray-dark">
+                      <p><strong>Ubicación:</strong> Unidad Deportiva Alberto Galindo, Cali</p>
+                      <p><strong>Objetivo del proyecto:</strong> Propuesta de un edificio complementario con uso C.A.F. a escala regional</p>
+                      <p><strong>Cliente:</strong> Planeación Municipal de Cali</p>
+                    </div>
+                  </div>
+                  
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto residencial multifamiliar ubicado en San Mateo, caracterizado por su diseño moderno y funcional. Esta obra cuenta con espacios amplios, acabados de alta calidad y una distribución optimizada que maximiza el confort y la funcionalidad para las familias residentes.
+                    Este proyecto es una propuesta arquitectónica destinada a enriquecer el complejo deportivo Alberto Galindo, situando un nuevo edificio entre el velódromo y el coliseo del pueblo. La edificación, diseñada en forma de H, se integra en el entorno creando múltiples accesos, de los cuales dos destacan por su jerarquía. Estos accesos facilitan un flujo continuo de sur a norte, enmarcando y realzando los edificios adyacentes.
                   </p>
+                  
                   <div className="relative">
                     <Carousel className="w-full">
                       <CarouselContent>
                         {[
-                          '/lovable-uploads/a0231876-44ff-404e-89f9-4a16ce9a1136.png',
-                          '/lovable-uploads/05b466a7-7e69-4b83-9839-aa10a6b3aba8.png',
-                          '/lovable-uploads/8af2e020-6417-42c4-bb4c-8abfdf7a18b7.png',
-                          '/lovable-uploads/c4eb8b3b-fcae-40f1-a097-5baf617bbd0e.png',
-                          '/lovable-uploads/f85ef43e-c33e-4ea6-9622-71c12f29c5b4.png',
-                          '/lovable-uploads/d1188f14-5216-4585-8a90-9c9be22cb36b.png'
+                          '/lovable-uploads/163e5a18-2756-460c-9d97-eb39bf5cece6.png',
+                          '/lovable-uploads/8b1e1869-31c2-4585-80b9-ee5d0c2806e0.png',
+                          '/lovable-uploads/3892e6ee-d398-43cb-8798-d2362d0b15a0.png',
+                          '/lovable-uploads/9f3130b9-7767-4f45-894f-59a92f1be10c.png',
+                          '/lovable-uploads/3e305044-1a3a-4dcb-8e2f-b1839dcf1c97.png',
+                          '/lovable-uploads/562e87d4-70c9-409a-b779-199ecfd18a03.png',
+                          '/lovable-uploads/185a1d8c-144f-4fc0-8510-492a5cc215d5.png'
                         ].map((image: string, index: number) => (
                           <CarouselItem key={index}>
                             <div className="aspect-video overflow-hidden rounded-lg">
                               <img
                                 src={image}
-                                alt={`Vivienda Multifamiliar San Mateo - Imagen ${index + 1}`}
+                                alt={`CAF Alberto Galindo - Imagen ${index + 1}`}
                                 className="w-full h-full object-cover"
                               />
                             </div>
@@ -188,150 +201,6 @@ const Gallery = () => {
                       <CarouselNext className="right-4" />
                     </Carousel>
                   </div>
-                </div>
-
-                {/* Segundo proyecto: Zona Húmeda de Pance – Casa 29 */}
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-construction-dark">
-                    Zona Húmeda de Pance – Casa 29
-                  </h3>
-                  <div className="relative">
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {[
-                          '/lovable-uploads/b365ec34-d208-4ea0-b1dc-6915a503ccea.png',
-                          '/lovable-uploads/6eadfce8-32d3-48eb-aed2-8b990d1e503c.png',
-                          '/lovable-uploads/2f97a21d-a5a5-42ca-8392-94a9a6aab462.png',
-                          '/lovable-uploads/d3344449-6ddb-40ef-af52-794a313b4888.png',
-                          '/lovable-uploads/612d311e-bccd-4607-801b-70446a3feff5.png'
-                        ].map((image: string, index: number) => (
-                          <CarouselItem key={index}>
-                            <div className="aspect-video overflow-hidden rounded-lg">
-                              <img
-                                src={image}
-                                alt={`Zona Húmeda de Pance – Casa 29 - Imagen ${index + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-4" />
-                      <CarouselNext className="right-4" />
-                    </Carousel>
-                  </div>
-                </div>
-
-                {/* Tercer proyecto: Zona Húmeda Familia Cifuentes */}
-                <div className="space-y-6">
-                  <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto de zona húmeda familiar diseñado con arquitectura contemporánea que integra armoniosamente espacios interiores y exteriores. Esta obra destaca por su diseño de piscina, áreas sociales techadas y un cuidado paisajismo que crea un ambiente de relajación y recreación familiar, maximizando el aprovechamiento de los espacios exteriores.
-                  </p>
-                  <div className="relative">
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {[
-                          '/lovable-uploads/e6624fef-2972-4ab4-ae4e-cc63006c8df4.png',
-                          '/lovable-uploads/0c441a8a-bd41-41c1-bcf5-8d61093064c1.png',
-                          '/lovable-uploads/aa785578-c4f2-4e98-80e6-c3fb65710e87.png',
-                          '/lovable-uploads/d814aabc-bc34-469b-8026-cae90d597a60.png',
-                          '/lovable-uploads/5014029d-c4e0-45e2-acf2-82b351f619ef.png',
-                          '/lovable-uploads/f6fbf69e-186f-482f-8ce1-9f67596a591b.png'
-                        ].map((image: string, index: number) => (
-                          <CarouselItem key={index}>
-                            <div className="aspect-video overflow-hidden rounded-lg">
-                              <img
-                                src={image}
-                                alt={`Zona Húmeda Familia Cifuentes - Imagen ${index + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-4" />
-                      <CarouselNext className="right-4" />
-                    </Carousel>
-                  </div>
-                </div>
-
-                {/* Cuarto proyecto: Diseño zona húmeda las Mercedes */}
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-construction-dark">
-                    Diseño comercial, oficina y bodegas
-                  </h3>
-                  <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto de diseño integral de zona húmeda de lujo que combina elementos arquitectónicos curvos y orgánicos con tecnología de punta. Esta obra se caracteriza por su piscina de diseño serpenteante con jacuzzi integrado, áreas de spa interiores con acabados en mosaico, iluminación LED perimetral y paisajismo tropical. El diseño maximiza la experiencia sensorial y el bienestar, creando un oasis privado de relajación y entretenimiento.
-                  </p>
-                  <div className="relative">
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {[
-                          '/lovable-uploads/79b25a4e-c126-491a-9946-c41118b6705f.png',
-                          '/lovable-uploads/a88cb4bd-391a-4f98-8db4-9aa824e3774b.png',
-                          '/lovable-uploads/34ce2885-b17b-4d7a-8832-8dba07fe545b.png',
-                          '/lovable-uploads/7117a904-df7a-4afc-824a-4ab0ca019e5c.png',
-                          '/lovable-uploads/19882f85-23ae-419b-9270-826cc50759db.png'
-                        ].map((image: string, index: number) => (
-                          <CarouselItem key={index}>
-                            <div className="aspect-video overflow-hidden rounded-lg">
-                              <img
-                                src={image}
-                                alt={`Diseño zona húmeda las Mercedes - Imagen ${index + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-4" />
-                      <CarouselNext className="right-4" />
-                    </Carousel>
-                  </div>
-                </div>
-
-                {/* Quinto proyecto: Vivienda Edward Castillo */}
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-construction-dark">
-                    Diseño zona húmeda las Mercedes
-                  </h3>
-                  <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto residencial unifamiliar que combina diseño contemporáneo con funcionalidad. Esta vivienda se caracteriza por su arquitectura minimalista, espacios interiores amplios y bien iluminados, cocina moderna integrada al área social, y fachada con elementos de madera que aportan calidez al diseño. El proyecto incluye optimización de espacios y acabados de alta calidad, creando un hogar confortable y estéticamente atractivo para la familia.
-                  </p>
-                  <div className="relative">
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {[
-                          '/lovable-uploads/a15298d1-f0f6-4c72-951f-1c30633ee370.png',
-                          '/lovable-uploads/0ac60b32-17d3-43b9-a2d2-0c5cca6a555f.png',
-                          '/lovable-uploads/310b8617-f29c-44dc-918a-44f3b61d94b4.png',
-                          '/lovable-uploads/a429a50a-be25-4f01-a32e-97cc4b72c375.png'
-                        ].map((image: string, index: number) => (
-                          <CarouselItem key={index}>
-                            <div className="aspect-video overflow-hidden rounded-lg">
-                              <img
-                                src={image}
-                                alt={`Vivienda Edward Castillo - Imagen ${index + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-4" />
-                      <CarouselNext className="right-4" />
-                    </Carousel>
-                  </div>
-                </div>
-
-                {/* Descripción detallada */}
-                <div className="prose max-w-none">
-                  <h3 className="text-xl font-semibold text-construction-dark mb-4">
-                    Vivienda Edward Castillo
-                  </h3>
-                  <p className="text-construction-gray-dark leading-relaxed">
-                    {selectedProject.description}
-                  </p>
                 </div>
 
                 {/* Botón de contacto */}
