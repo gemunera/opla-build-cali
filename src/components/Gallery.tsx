@@ -246,7 +246,7 @@ const Gallery = () => {
                 {/* Descripción detallada */}
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-construction-dark mb-4">
-                    {t('gallery.serviceDescription')}
+                    Zona húmeda familia Cifuentes
                   </h3>
                   <p className="text-construction-gray-dark leading-relaxed">
                     {selectedProject.description}
