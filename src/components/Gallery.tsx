@@ -281,7 +281,7 @@ const Gallery = () => {
                 {/* Quinto proyecto: Vivienda Edward Castillo */}
                 <div className="space-y-6">
                   <h3 className="text-xl font-semibold text-construction-dark">
-                    Vivienda Edward Castillo
+                    Diseño zona húmeda las Mercedes
                   </h3>
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
                     Proyecto residencial unifamiliar que combina diseño contemporáneo con funcionalidad. Esta vivienda se caracteriza por su arquitectura minimalista, espacios interiores amplios y bien iluminados, cocina moderna integrada al área social, y fachada con elementos de madera que aportan calidez al diseño. El proyecto incluye optimización de espacios y acabados de alta calidad, creando un hogar confortable y estéticamente atractivo para la familia.
