@@ -16,9 +16,9 @@ const Gallery = () => {
   const projects = [
     {
       title: t('gallery.project1.title'),
-      image: houseImage,
+      image: '/lovable-uploads/bd43a32b-90c3-4ad4-a56e-76e6b72ae80e.png',
       description: t('gallery.project1.description'),
-      gallery: [houseImage, heroImage, officeImage]
+      gallery: ['/lovable-uploads/bd43a32b-90c3-4ad4-a56e-76e6b72ae80e.png', heroImage, officeImage]
     },
     {
       title: t('gallery.project2.title'),
