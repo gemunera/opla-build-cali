@@ -15,16 +15,29 @@ const Gallery = () => {
 
   const projects = [
     {
-      title: t('gallery.project1.title'),
+      title: "Vivienda Multifamiliar San Mateo",
       image: '/lovable-uploads/bd43a32b-90c3-4ad4-a56e-76e6b72ae80e.png',
       description: t('gallery.project1.description'),
-      gallery: ['/lovable-uploads/bd43a32b-90c3-4ad4-a56e-76e6b72ae80e.png', heroImage, officeImage]
+      gallery: [
+        '/lovable-uploads/a0231876-44ff-404e-89f9-4a16ce9a1136.png',
+        '/lovable-uploads/05b466a7-7e69-4b83-9839-aa10a6b3aba8.png',
+        '/lovable-uploads/8af2e020-6417-42c4-bb4c-8abfdf7a18b7.png',
+        '/lovable-uploads/c4eb8b3b-fcae-40f1-a097-5baf617bbd0e.png',
+        '/lovable-uploads/f85ef43e-c33e-4ea6-9622-71c12f29c5b4.png',
+        '/lovable-uploads/d1188f14-5216-4585-8a90-9c9be22cb36b.png'
+      ]
     },
     {
-      title: t('gallery.project2.title'),
-      image: officeImage,
+      title: "Zona Húmeda – Casa 29, Pance",
+      image: '/lovable-uploads/5d08e8df-3e3a-4cca-b61d-b137b2ea2dc1.png',
       description: t('gallery.project2.description'),
-      gallery: [officeImage, houseImage, heroImage]
+      gallery: [
+        '/lovable-uploads/5d08e8df-3e3a-4cca-b61d-b137b2ea2dc1.png',
+        '/lovable-uploads/bef0e36a-1c35-4020-830b-3c1794f3e047.png',
+        '/lovable-uploads/906e0622-d3f7-49ee-acca-c2c48209433a.png',
+        '/lovable-uploads/a3385894-373f-4f7f-9462-38c2f7779d80.png',
+        '/lovable-uploads/a3163fb2-f351-4b2a-bf34-ce274d784d23.png'
+      ]
     },
     {
       title: t('gallery.project3.title'),
@@ -126,7 +139,7 @@ const Gallery = () => {
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-construction-dark">
-                Vivienda Multifamiliar San Mateo
+                {selectedProject.title}
               </DialogTitle>
             </DialogHeader>
             
@@ -136,14 +149,7 @@ const Gallery = () => {
                 <div className="relative">
                   <Carousel className="w-full">
                     <CarouselContent>
-                      {[
-                        '/lovable-uploads/a0231876-44ff-404e-89f9-4a16ce9a1136.png',
-                        '/lovable-uploads/05b466a7-7e69-4b83-9839-aa10a6b3aba8.png',
-                        '/lovable-uploads/8af2e020-6417-42c4-bb4c-8abfdf7a18b7.png',
-                        '/lovable-uploads/c4eb8b3b-fcae-40f1-a097-5baf617bbd0e.png',
-                        '/lovable-uploads/f85ef43e-c33e-4ea6-9622-71c12f29c5b4.png',
-                        '/lovable-uploads/d1188f14-5216-4585-8a90-9c9be22cb36b.png'
-                      ].map((image: string, index: number) => (
+                      {selectedProject.gallery.map((image: string, index: number) => (
                         <CarouselItem key={index}>
                           <div className="aspect-video overflow-hidden rounded-lg">
                             <img
