@@ -126,7 +126,7 @@ const Gallery = () => {
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-construction-dark">
-                {selectedProject?.title}
+                Vivienda Multifamiliar San Mateo
               </DialogTitle>
             </DialogHeader>
             
@@ -136,7 +136,14 @@ const Gallery = () => {
                 <div className="relative">
                   <Carousel className="w-full">
                     <CarouselContent>
-                      {selectedProject.gallery.map((image: string, index: number) => (
+                      {[
+                        '/lovable-uploads/a0231876-44ff-404e-89f9-4a16ce9a1136.png',
+                        '/lovable-uploads/05b466a7-7e69-4b83-9839-aa10a6b3aba8.png',
+                        '/lovable-uploads/8af2e020-6417-42c4-bb4c-8abfdf7a18b7.png',
+                        '/lovable-uploads/c4eb8b3b-fcae-40f1-a097-5baf617bbd0e.png',
+                        '/lovable-uploads/f85ef43e-c33e-4ea6-9622-71c12f29c5b4.png',
+                        '/lovable-uploads/d1188f14-5216-4585-8a90-9c9be22cb36b.png'
+                      ].map((image: string, index: number) => (
                         <CarouselItem key={index}>
                           <div className="aspect-video overflow-hidden rounded-lg">
                             <img
