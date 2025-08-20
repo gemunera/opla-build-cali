@@ -149,7 +149,7 @@ const Gallery = () => {
                 <div className="relative">
                   <Carousel className="w-full">
                     <CarouselContent>
-                      {selectedProject.gallery.map((image: string, index: number) => (
+                      {selectedProject.gallery?.map((image: string, index: number) => (
                         <CarouselItem key={index}>
                           <div className="aspect-video overflow-hidden rounded-lg">
                             <img
