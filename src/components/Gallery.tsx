@@ -139,7 +139,7 @@ const Gallery = () => {
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-construction-dark">
-                {selectedProject.title}
+                {selectedProject?.title || 'Proyecto'}
               </DialogTitle>
             </DialogHeader>
             
