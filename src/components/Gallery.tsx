@@ -212,9 +212,6 @@ const Gallery = () => {
 
                 {/* Tercer proyecto: Zona Húmeda Familia Cifuentes */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-construction-dark">
-                    Zona Húmeda Familia Cifuentes
-                  </h3>
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
                     Proyecto de zona húmeda familiar diseñado con arquitectura contemporánea que integra armoniosamente espacios interiores y exteriores. Esta obra destaca por su diseño de piscina, áreas sociales techadas y un cuidado paisajismo que crea un ambiente de relajación y recreación familiar, maximizando el aprovechamiento de los espacios exteriores.
                   </p>
