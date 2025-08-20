@@ -147,9 +147,9 @@ const Gallery = () => {
               <div className="space-y-8">
                 {/* Primer proyecto: Vivienda Multifamiliar San Mateo */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-construction-dark">
-                    Vivienda Multifamiliar San Mateo
-                  </h3>
+                  <p className="text-lg text-construction-gray-dark leading-relaxed">
+                    Proyecto residencial multifamiliar ubicado en San Mateo, caracterizado por su diseño moderno y funcional. Esta obra cuenta con espacios amplios, acabados de alta calidad y una distribución optimizada que maximiza el confort y la funcionalidad para las familias residentes.
+                  </p>
                   <div className="relative">
                     <Carousel className="w-full">
                       <CarouselContent>
