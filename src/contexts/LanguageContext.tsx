@@ -231,7 +231,13 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState<Language>('es'); // Default to Spanish
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations['es']] || key;
+    const text = translations[language][key as keyof typeof translations['es']] || key;
+    // Replace dynamic year in footer rights
+    if (key === 'footer.rights') {
+      const currentYear = new Date().getFullYear();
+      return text.replace('2024', currentYear.toString());
+    }
+    return text;
   };
 
   return (
