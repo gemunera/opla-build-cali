@@ -13,6 +13,18 @@ const Gallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useLanguage();
 
+  const projectTitles = [
+    "Diseño de casas y apartamentos",
+    "Diseños comercial, oficina y bodegas", 
+    "Diseño de planos constructivos",
+    "Construcción de casas y apartamentos",
+    "Construcción de L.comercial y bodegas",
+    "Coordinación Bim de proyectos",
+    "Estructuración de proyectos",
+    "Licencia de contratación y consultoría urbana",
+    "Diseño Parametrico y en Guadua"
+  ];
+
   const projects = [
     {
       title: "Vivienda Multifamiliar San Mateo",
@@ -115,7 +127,7 @@ const Gallery = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <h4 className="absolute bottom-4 left-4 text-xl font-semibold text-white">
-                  Diseño de casas y apartamentos
+                  {projectTitles[projectIndex]}
                 </h4>
               </div>
               <CardContent className="p-6 flex flex-col flex-grow">
