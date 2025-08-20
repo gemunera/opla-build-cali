@@ -118,7 +118,7 @@ const translations = {
     'footer.contactTitle': 'Contactos en Cali',
     'footer.servicesTitle': 'Nuestros Servicios',
     'footer.rights': '© 2024 OPLA - Todos los derechos reservados',
-    'footer.location': 'Cali, Colombia • Construcción profesional desde 2020',
+    'footer.location': 'Cali, Colombia • Construcción profesional desde 2014',
   },
   en: {
     // Header
@@ -219,7 +219,7 @@ const translations = {
     'footer.contactTitle': 'Contact in Cali',
     'footer.servicesTitle': 'Our Services',
     'footer.rights': '© 2024 OPLA - All rights reserved',
-    'footer.location': 'Cali, Colombia • Professional construction since 2020',
+    'footer.location': 'Cali, Colombia • Professional construction since 2014',
   }
 };
 
