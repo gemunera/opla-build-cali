@@ -246,7 +246,7 @@ const Gallery = () => {
                 {/* Cuarto proyecto: Diseño zona húmeda las Mercedes */}
                 <div className="space-y-6">
                   <h3 className="text-xl font-semibold text-construction-dark">
-                    Zona húmeda familia Cifuentes
+                    Diseño comercial, oficina y bodegas
                   </h3>
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
                     Proyecto de diseño integral de zona húmeda de lujo que combina elementos arquitectónicos curvos y orgánicos con tecnología de punta. Esta obra se caracteriza por su piscina de diseño serpenteante con jacuzzi integrado, áreas de spa interiores con acabados en mosaico, iluminación LED perimetral y paisajismo tropical. El diseño maximiza la experiencia sensorial y el bienestar, creando un oasis privado de relajación y entretenimiento.
