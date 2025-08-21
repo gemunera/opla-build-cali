@@ -164,6 +164,37 @@ const Gallery = () => {
                         </Carousel>
                       </div>
                     </div>
+
+                    {/* Zona Húmeda – Casa 29 Pance */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Zona Húmeda – Casa 29 Pance</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Pance, Cali, Colombia<br /><br />
+                        Se proyecta una piscina y una zona húmeda concebidas para transmitir la sensación de haber existido siempre en el lugar, integrándose de manera orgánica con el entorno. El diseño se inspira en la topografía natural, adoptando formas fluidas que evocan las curvas suaves e impredecibles de la naturaleza.<br /><br />
+                        La intención es que el espacio se perciba como una extensión del paisaje, evitando líneas rígidas o artificiosas y logrando una armonía visual que evoque un ambiente natural, atemporal y contemplativo. Esta propuesta refleja los principios de la arquitectura paramétrica generativa, donde el diseño emerge en diálogo con la naturaleza y su geometría orgánica.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {[
+                              '/lovable-uploads/001824a4-a4b9-4fcb-91cd-3b7bedd6d122.png',
+                              '/lovable-uploads/ea42965e-f5bb-4682-bfa3-b4932167c60b.png',
+                              '/lovable-uploads/a1acd055-1c2f-4e67-a50d-09ae4024005b.png',
+                              '/lovable-uploads/f513f4e5-d758-4e2a-8cfd-6f363d782a04.png',
+                              '/lovable-uploads/7edad032-1d8e-45fb-8eca-4aba92211213.png'
+                            ].map((image: string, index: number) => (
+                              <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Casa 29 Pance - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
                   </div>
                 )}
 
