@@ -261,7 +261,7 @@ const Gallery = () => {
                 {/* Cuarto proyecto: Diseño zona húmeda las Mercedes */}
                 <div className="space-y-6">
                   <h3 className="text-xl font-semibold text-construction-dark">
-                    Diseño de casas y apartamentos
+                    Zona Húmeda familia Cifuentes
                   </h3>
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
                      <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
