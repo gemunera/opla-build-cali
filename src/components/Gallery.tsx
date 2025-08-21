@@ -331,6 +331,45 @@ const Gallery = () => {
                   </div>
                 </div>
 
+                {/* Sexto proyecto: CAF Alberto Galindo */}
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-construction-dark">
+                    CAF Alberto Galindo
+                  </h3>
+                  <p className="text-lg text-construction-gray-dark leading-relaxed">
+                    <strong>NOMBRE DEL PROYECTO:</strong> CAF Alberto Galindo<br />
+                    <strong>UBICACIÓN:</strong> Unidad Deportiva Alberto Galindo, Cali, Colombia<br /><br />
+                    Este proyecto constituye una propuesta arquitectónica destinada a enriquecer el complejo deportivo Alberto Galindo mediante la incorporación de un nuevo edificio, ubicado estratégicamente entre el velódromo y el Coliseo del Pueblo.<br /><br />
+                    La edificación, concebida con una forma en "H", se integra de manera armónica al entorno, generando múltiples accesos que fortalecen la conectividad del complejo. Dos de estos accesos, jerárquicos en su diseño, estructuran un flujo continuo de sur a norte, enmarcando y realzando a los edificios adyacentes, al tiempo que refuerzan la identidad del conjunto deportivo.
+                  </p>
+                  <div className="relative">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {[
+                          '/lovable-uploads/8796140c-01ce-4a46-a8bc-4f7e5e086d85.png',
+                          '/lovable-uploads/4ef43303-d16e-4e6c-b369-52f8d253919f.png',
+                          '/lovable-uploads/9418429a-c330-44f1-aaf2-bc43ab0f6111.png',
+                          '/lovable-uploads/a3552261-6df8-4241-a37c-cd0a0972b3c0.png',
+                          '/lovable-uploads/a442d29f-5314-4f86-82e5-c9333f9fc201.png',
+                          '/lovable-uploads/fb1c2153-ead1-410e-87d2-27e5c6750c9c.png'
+                        ].map((image: string, index: number) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={image}
+                                alt={`CAF Alberto Galindo - Imagen ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  </div>
+                </div>
+
                 {/* Descripción detallada */}
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-construction-dark mb-4">
