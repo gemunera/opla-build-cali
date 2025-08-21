@@ -168,25 +168,60 @@ const Gallery = () => {
                 )}
 
                 {selectedProject.index === 1 && (
-                  <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      <strong>UBICACIÓN:</strong> Pance, Cali<br /><br />
-                      Proyecto de zona húmeda en Pance que integra elementos naturales con diseño contemporáneo. La propuesta busca crear una experiencia inmersiva que conecte con el entorno natural del sector.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>
-                          ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                  <div className="space-y-8">
+                    {/* Zona Húmeda – Casa 29, Pance */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Zona Húmeda – Casa 29, Pance</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Pance, Cali<br /><br />
+                        Proyecto de zona húmeda en Pance que integra elementos naturales con diseño contemporáneo. La propuesta busca crear una experiencia inmersiva que conecte con el entorno natural del sector.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {selectedProject.gallery.map((image: string, index: number) => (
+                              <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
+                    {/* CAF Alberto Galindo */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">CAF Alberto Galindo</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Unidad Deportiva Alberto Galindo, Cali, Colombia<br /><br />
+                        Este proyecto constituye una propuesta arquitectónica destinada a enriquecer el complejo deportivo Alberto Galindo mediante la incorporación de un nuevo edificio, ubicado estratégicamente entre el velódromo y el Coliseo del Pueblo.<br /><br />
+                        La edificación, concebida con una forma en "H", se integra de manera armónica al entorno, generando múltiples accesos que fortalecen la conectividad del complejo. Dos de estos accesos, jerárquicos en su diseño, estructuran un flujo continuo de sur a norte, enmarcando y realzando a los edificios adyacentes, al tiempo que refuerzan la identidad del conjunto deportivo.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {[
+                              '/lovable-uploads/356b164b-2492-4e83-9ccc-9fc62cce64e1.png',
+                              '/lovable-uploads/2c12a308-7ddd-4f69-af83-a27b8c7da66c.png',
+                              '/lovable-uploads/c0d1c364-048c-41bd-9e25-02f3c31ec72b.png',
+                              '/lovable-uploads/01987550-a0bb-4660-aef2-b95183f8e860.png',
+                              '/lovable-uploads/b2807da5-df39-418e-98ea-1c164324d720.png'
+                            ].map((image: string, index: number) => (
+                              <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`CAF Alberto Galindo - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>
                 )}
