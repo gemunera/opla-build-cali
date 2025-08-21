@@ -31,9 +31,9 @@ const Gallery = () => {
     gallery: [houseImage, officeImage, heroImage]
   }, {
     title: t('gallery.project4.title'),
-    image: houseImage,
+    image: '/lovable-uploads/05fc68d0-bea2-4165-92c4-192dedbbcf82.png',
     description: t('gallery.project4.description'),
-    gallery: [houseImage, heroImage, officeImage]
+    gallery: ['/lovable-uploads/05fc68d0-bea2-4165-92c4-192dedbbcf82.png', heroImage, officeImage]
   }, {
     title: t('gallery.project5.title'),
     image: officeImage,
