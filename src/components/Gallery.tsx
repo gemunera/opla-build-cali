@@ -190,8 +190,8 @@ const Gallery = () => {
                                 
                               </CarouselItem>)}
                           </CarouselContent>
-                          <CarouselPrevious className="left-4" />
-                          <CarouselNext className="right-4" />
+                          
+                          
                         </Carousel>
                       </div>
                     </div>
