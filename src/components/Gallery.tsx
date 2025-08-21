@@ -13,7 +13,7 @@ const Gallery = () => {
   const {
     t
   } = useLanguage();
-  const projectTitles = ["Diseño de casas y apartamentos", "Diseños comercial, oficina y bodegas", "Diseño de planos constructivos", "Construcción de casas y apartamentos", "Construcción de L.comercial y bodegas", "Coordinación Bim de proyectos", "Estructuración de proyectos", "Licencia de contratación y consultoría urbana", "Diseño Parametrico y en Guadua"];
+  const projectTitles = ["Diseño de casas y apartamentos", "Diseños comercial, oficina y bodegas", "Diseño de planos constructivos", "Construcción de casas y apartamentos", "Construcción de L.comercial y bodegas", "Coordinación Bim de proyectos", "Estructuración de proyectos", "Licencia de contratación y consultoría urbana", "Diseño Parametrico y en Guadua", "Adecuación de Zona Húmeda – Casa Cifuentes"];
   const projects = [{
     title: "Vivienda Multifamiliar San Mateo",
     image: '/lovable-uploads/bd43a32b-90c3-4ad4-a56e-76e6b72ae80e.png',
@@ -59,6 +59,18 @@ const Gallery = () => {
     image: houseImage,
     description: t('gallery.project9.description'),
     gallery: [houseImage, heroImage, officeImage]
+  }, {
+    title: "Adecuación de Zona Húmeda – Casa Cifuentes",
+    image: '/lovable-uploads/11a04318-e224-41a5-a617-6cb431fae3da.png',
+    description: "Proyecto que busca generar un equilibrio entre una visión contemporánea y la esencia clásica de una vivienda colonial.",
+    gallery: [
+      '/lovable-uploads/11a04318-e224-41a5-a617-6cb431fae3da.png',
+      '/lovable-uploads/541f8ffc-309f-481f-9f62-2b96ebb3a219.png',
+      '/lovable-uploads/e22ccf67-445b-466b-9820-4e157f01afe7.png',
+      '/lovable-uploads/78c33503-fda1-416e-906f-378a63da7813.png',
+      '/lovable-uploads/5a89946d-1216-4323-bca2-7e431be3bb94.png',
+      '/lovable-uploads/dea26742-d744-49c2-9abc-8494d1ead752.png'
+    ]
   }];
   const openModal = (project: any, index: number) => {
     setSelectedProject({ ...project, index });
@@ -298,6 +310,31 @@ const Gallery = () => {
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
                       Diseño paramétrico y en Guadua que aprovecha las propiedades únicas de este material sostenible. La guadua ofrece resistencia, flexibilidad y belleza natural, creando estructuras innovadoras y ecológicamente responsables.
+                    </p>
+                    <div className="relative">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {selectedProject.gallery.map((image: string, index: number) => (
+                            <CarouselItem key={index}>
+                              <div className="aspect-video overflow-hidden rounded-lg">
+                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-4" />
+                        <CarouselNext className="right-4" />
+                      </Carousel>
+                    </div>
+                  </div>
+                )}
+
+                {selectedProject.index === 9 && (
+                  <div className="space-y-6">
+                    <p className="text-lg text-construction-gray-dark leading-relaxed">
+                      <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
+                      Este proyecto busca generar un equilibrio entre una visión contemporánea —simbolizada en "la piscina en la casa"— y la esencia clásica de una vivienda colonial. La propuesta integra la piscina como un componente esencial del espacio, combinándola con los rasgos distintivos del estilo colonial, como los patios centrales, las galerías abiertas y el uso de materiales autóctonos.<br /><br />
+                      El reto consiste en lograr una armonía entre ambas corrientes, conservando la sofisticación y el carácter histórico de la arquitectura colonial, mientras se incorpora la piscina como un recurso estético y funcional de lenguaje actual. El diseño respeta las proporciones, los detalles ornamentales y la atmósfera acogedora del estilo colonial, pero a su vez transforma la piscina en un espejo de agua que enriquece el entorno, reflejando tanto la naturaleza circundante como los elementos arquitectónicos.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
