@@ -337,7 +337,10 @@ const Gallery = () => {
                     Vivienda Edward Castillo
                   </h3>
                   <p className="text-construction-gray-dark leading-relaxed">
-                    {selectedProject.description}
+                    <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                    Este proyecto, ubicado en la ciudad de Cali, consiste en un edificio multifamiliar con una propuesta innovadora: dos apartamentos por piso, diseñados como dúplex en los niveles intermedios. Esta decisión surge tras un análisis exhaustivo de las necesidades de la población del sector, conformada principalmente por familias pequeñas que valoran los espacios amplios, cómodos y funcionales.<br /><br />
+                    El diseño responde de manera eficiente a las servidumbres externas e internas, optimizando las visuales mediante elementos arquitectónicos estratégicamente dispuestos. Esto permite una adecuada separación entre las áreas privadas y los espacios compartidos, garantizando tanto la privacidad como el confort en las actividades cotidianas.<br /><br />
+                    La propuesta logra un balance entre funcionalidad, estética y una comprensión profunda de las dinámicas familiares propias de esta zona de la ciudad.
                   </p>
                 </div>
 
