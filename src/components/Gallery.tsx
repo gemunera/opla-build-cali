@@ -267,6 +267,29 @@ const Gallery = () => {
                       </div>
                     </div>
 
+                    {/* Proyecto Comercial Trunchet, París */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Proyecto Comercial Trunchet, París + Mobiliario</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> París, Francia<br /><br />
+                        El espacio juega un papel fundamental al articular el diseño arquitectónico con la identidad de la marca. El desafío consiste en lograr que el concepto de la marca se exprese en cada detalle, desde su integración en el contexto urbano hasta la experiencia interior del local.<br /><br />
+                        La propuesta busca generar una vivencia inmersiva, en la que tanto los productos como el mobiliario personalizado refuercen el relato que se desea transmitir, creando así una conexión emocional y sensorial con los usuarios. Bajo este enfoque narrativo, el espacio trasciende la idea de ser únicamente un lugar de transacción comercial y se convierte en una extensión física de la marca, donde cada elemento —desde la entrada hasta la disposición de los productos— contribuye a una coherencia visual y experiencial única.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/5679bbf1-4b1a-4e9b-a724-1a11bdc3298c.png', '/lovable-uploads/d5691c69-3275-4cc8-a938-1521d1c96c96.png', '/lovable-uploads/7f51c728-d321-4986-8877-c93a49ed8d60.png', '/lovable-uploads/c347f207-3832-4f67-8e0d-c741d829ec37.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Proyecto Comercial Trunchet París - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
                     {/* CAF Alberto Galindo */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">CAF Alberto Galindo</h3>
