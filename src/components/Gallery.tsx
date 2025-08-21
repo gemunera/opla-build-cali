@@ -350,8 +350,7 @@ const Gallery = () => {
                           '/lovable-uploads/4ef43303-d16e-4e6c-b369-52f8d253919f.png',
                           '/lovable-uploads/9418429a-c330-44f1-aaf2-bc43ab0f6111.png',
                           '/lovable-uploads/a3552261-6df8-4241-a37c-cd0a0972b3c0.png',
-                          '/lovable-uploads/a442d29f-5314-4f86-82e5-c9333f9fc201.png',
-                          '/lovable-uploads/fb1c2153-ead1-410e-87d2-27e5c6750c9c.png'
+                          '/lovable-uploads/a442d29f-5314-4f86-82e5-c9333f9fc201.png'
                         ].map((image: string, index: number) => (
                           <CarouselItem key={index}>
                             <div className="aspect-video overflow-hidden rounded-lg">
