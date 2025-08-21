@@ -160,7 +160,8 @@ const Gallery = () => {
                 {/* Primer proyecto: Vivienda Multifamiliar San Mateo */}
                 <div className="space-y-6">
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto residencial multifamiliar ubicado en San Mateo, caracterizado por su diseño moderno y funcional. Esta obra cuenta con espacios amplios, acabados de alta calidad y una distribución optimizada que maximiza el confort y la funcionalidad para las familias residentes.
+                    <strong>UBICACIÓN:</strong> Valle del Cauca, Cali<br /><br />
+                    El proyecto se desarrolla en un barrio de estrato 3, donde el mayor desafío es ajustarse a un presupuesto limitado sin sacrificar la calidad espacial ni el impacto arquitectónico. La propuesta busca generar una experiencia enriquecedora tanto para los residentes —al habitar y recorrer el edificio— como para los transeúntes que lo observan en su vida cotidiana, despertando asombro y promoviendo una conexión armónica con el entorno urbano.
                   </p>
                   <div className="relative">
                     <Carousel className="w-full">
