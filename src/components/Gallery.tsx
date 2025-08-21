@@ -177,11 +177,11 @@ const Gallery = () => {
                         <Carousel className="w-full">
                           <CarouselContent>
                             {[
-                              '/lovable-uploads/001824a4-a4b9-4fcb-91cd-3b7bedd6d122.png',
-                              '/lovable-uploads/ea42965e-f5bb-4682-bfa3-b4932167c60b.png',
-                              '/lovable-uploads/a1acd055-1c2f-4e67-a50d-09ae4024005b.png',
-                              '/lovable-uploads/f513f4e5-d758-4e2a-8cfd-6f363d782a04.png',
-                              '/lovable-uploads/7edad032-1d8e-45fb-8eca-4aba92211213.png'
+                              '/lovable-uploads/a360cff6-773e-4ed4-aa19-852e2b143ebc.png',
+                              '/lovable-uploads/e4e19ff1-9614-4e3b-8ac0-ab06aced84e8.png',
+                              '/lovable-uploads/202a1a46-2d96-4b13-a476-b355ac8ec421.png',
+                              '/lovable-uploads/830908ed-8c9f-4600-820e-f7b2976b8189.png',
+                              '/lovable-uploads/1a9ee01b-d0e2-4ade-9cc7-7504b70bab57.png'
                             ].map((image: string, index: number) => (
                               <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
