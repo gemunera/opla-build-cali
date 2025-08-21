@@ -200,6 +200,30 @@ const Gallery = () => {
                         </Carousel>
                       </div>
                     </div>
+
+                    {/* Vivienda Multifamiliar Edward Castillo */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Vivienda Multifamiliar Edward Castillo</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Este proyecto, desarrollado en la ciudad de Cali, consiste en un edificio multifamiliar con una propuesta innovadora: dos apartamentos por piso, diseñados como dúplex en los niveles intermedios. Esta decisión arquitectónica surge tras un análisis exhaustivo de las necesidades de la población del sector, conformada principalmente por familias pequeñas que, sin embargo, valoran espacios amplios y funcionales.<br /><br />
+                        El diseño responde de manera eficiente a las servidumbres externas e internas, optimizando las visuales mediante elementos arquitectónicos estratégicamente ubicados. Esto permite una adecuada separación entre las áreas privadas y los espacios compartidos, garantizando privacidad y confort en la vida cotidiana.<br /><br />
+                        La propuesta combina funcionalidad, estética y una comprensión profunda de las dinámicas familiares propias de esta zona de la ciudad, logrando un proyecto equilibrado y contemporáneo.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/232772ab-c02b-477c-8269-27b51820fc27.png', '/lovable-uploads/63438572-4677-4b74-a3b3-01f19633eb2a.png', '/lovable-uploads/078d2bac-0b7a-471c-bf27-95690c4fb917.png', '/lovable-uploads/b55e96b5-75bf-463d-9d58-e0dbc5904227.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Vivienda Multifamiliar Edward Castillo - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
                   </div>}
 
                 {selectedProject.index === 1 && <div className="space-y-8">
