@@ -61,7 +61,10 @@ const Gallery = () => {
     gallery: [houseImage, heroImage, officeImage]
   }];
   const openModal = (project: any, index: number) => {
-    setSelectedProject({ ...project, index });
+    setSelectedProject({
+      ...project,
+      index
+    });
     setIsModalOpen(true);
   };
   return <section id="productos" className="py-20 bg-background">
@@ -100,15 +103,12 @@ const Gallery = () => {
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-construction-dark">
-                {selectedProject?.title || 'Proyecto'}
-              </DialogTitle>
+              
             </DialogHeader>
             
             {selectedProject && <div className="space-y-8">
                 {/* Contenido específico por proyecto */}
-                {selectedProject.index === 0 && (
-                  <div className="space-y-8">
+                {selectedProject.index === 0 && <div className="space-y-8">
                     {/* Vivienda Multifamiliar San Mateo */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">Vivienda Multifamiliar San Mateo</h3>
@@ -119,13 +119,11 @@ const Gallery = () => {
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {selectedProject.gallery.map((image: string, index: number) => (
-                              <CarouselItem key={index}>
+                            {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
                                   <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                                 </div>
-                              </CarouselItem>
-                            ))}
+                              </CarouselItem>)}
                           </CarouselContent>
                           <CarouselPrevious className="left-4" />
                           <CarouselNext className="right-4" />
@@ -144,20 +142,11 @@ const Gallery = () => {
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {[
-                              '/lovable-uploads/11a04318-e224-41a5-a617-6cb431fae3da.png',
-                              '/lovable-uploads/541f8ffc-309f-481f-9f62-2b96ebb3a219.png',
-                              '/lovable-uploads/e22ccf67-445b-466b-9820-4e157f01afe7.png',
-                              '/lovable-uploads/78c33503-fda1-416e-906f-378a63da7813.png',
-                              '/lovable-uploads/5a89946d-1216-4323-bca2-7e431be3bb94.png',
-                              '/lovable-uploads/dea26742-d744-49c2-9abc-8494d1ead752.png'
-                            ].map((image: string, index: number) => (
-                              <CarouselItem key={index}>
+                            {['/lovable-uploads/11a04318-e224-41a5-a617-6cb431fae3da.png', '/lovable-uploads/541f8ffc-309f-481f-9f62-2b96ebb3a219.png', '/lovable-uploads/e22ccf67-445b-466b-9820-4e157f01afe7.png', '/lovable-uploads/78c33503-fda1-416e-906f-378a63da7813.png', '/lovable-uploads/5a89946d-1216-4323-bca2-7e431be3bb94.png', '/lovable-uploads/dea26742-d744-49c2-9abc-8494d1ead752.png'].map((image: string, index: number) => <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
                                   <img src={image} alt={`Casa Cifuentes - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                                 </div>
-                              </CarouselItem>
-                            ))}
+                              </CarouselItem>)}
                           </CarouselContent>
                           <CarouselPrevious className="left-4" />
                           <CarouselNext className="right-4" />
@@ -176,47 +165,30 @@ const Gallery = () => {
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {[
-                              '/lovable-uploads/a360cff6-773e-4ed4-aa19-852e2b143ebc.png',
-                              '/lovable-uploads/e4e19ff1-9614-4e3b-8ac0-ab06aced84e8.png',
-                              '/lovable-uploads/202a1a46-2d96-4b13-a476-b355ac8ec421.png',
-                              '/lovable-uploads/830908ed-8c9f-4600-820e-f7b2976b8189.png',
-                              '/lovable-uploads/1a9ee01b-d0e2-4ade-9cc7-7504b70bab57.png'
-                            ].map((image: string, index: number) => (
-                              <CarouselItem key={index}>
+                            {['/lovable-uploads/a360cff6-773e-4ed4-aa19-852e2b143ebc.png', '/lovable-uploads/e4e19ff1-9614-4e3b-8ac0-ab06aced84e8.png', '/lovable-uploads/202a1a46-2d96-4b13-a476-b355ac8ec421.png', '/lovable-uploads/830908ed-8c9f-4600-820e-f7b2976b8189.png', '/lovable-uploads/1a9ee01b-d0e2-4ade-9cc7-7504b70bab57.png'].map((image: string, index: number) => <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
                                   <img src={image} alt={`Casa 29 Pance - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                                 </div>
-                              </CarouselItem>
-                            ))}
+                              </CarouselItem>)}
                           </CarouselContent>
                           <CarouselPrevious className="left-4" />
                           <CarouselNext className="right-4" />
                         </Carousel>
                       </div>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 1 && (
-                  <div className="space-y-8">
+                {selectedProject.index === 1 && <div className="space-y-8">
                     {/* Zona Húmeda – Casa 29, Pance */}
                     <div className="space-y-6">
-                      <h3 className="text-xl font-bold text-construction-dark">Zona Húmeda – Casa 29, Pance</h3>
-                      <p className="text-lg text-construction-gray-dark leading-relaxed">
-                        <strong>UBICACIÓN:</strong> Pance, Cali<br /><br />
-                        Proyecto de zona húmeda en Pance que integra elementos naturales con diseño contemporáneo. La propuesta busca crear una experiencia inmersiva que conecte con el entorno natural del sector.
-                      </p>
+                      
+                      
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {selectedProject.gallery.map((image: string, index: number) => (
-                              <CarouselItem key={index}>
-                                <div className="aspect-video overflow-hidden rounded-lg">
-                                  <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                                </div>
-                              </CarouselItem>
-                            ))}
+                            {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
+                                
+                              </CarouselItem>)}
                           </CarouselContent>
                           <CarouselPrevious className="left-4" />
                           <CarouselNext className="right-4" />
@@ -235,168 +207,134 @@ const Gallery = () => {
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {[
-                              '/lovable-uploads/356b164b-2492-4e83-9ccc-9fc62cce64e1.png',
-                              '/lovable-uploads/2c12a308-7ddd-4f69-af83-a27b8c7da66c.png',
-                              '/lovable-uploads/c0d1c364-048c-41bd-9e25-02f3c31ec72b.png',
-                              '/lovable-uploads/01987550-a0bb-4660-aef2-b95183f8e860.png',
-                              '/lovable-uploads/b2807da5-df39-418e-98ea-1c164324d720.png'
-                            ].map((image: string, index: number) => (
-                              <CarouselItem key={index}>
+                            {['/lovable-uploads/356b164b-2492-4e83-9ccc-9fc62cce64e1.png', '/lovable-uploads/2c12a308-7ddd-4f69-af83-a27b8c7da66c.png', '/lovable-uploads/c0d1c364-048c-41bd-9e25-02f3c31ec72b.png', '/lovable-uploads/01987550-a0bb-4660-aef2-b95183f8e860.png', '/lovable-uploads/b2807da5-df39-418e-98ea-1c164324d720.png'].map((image: string, index: number) => <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
                                   <img src={image} alt={`CAF Alberto Galindo - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                                 </div>
-                              </CarouselItem>
-                            ))}
+                              </CarouselItem>)}
                           </CarouselContent>
                           <CarouselPrevious className="left-4" />
                           <CarouselNext className="right-4" />
                         </Carousel>
                       </div>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 2 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 2 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Diseño de planos constructivos que integran innovación técnica con funcionalidad práctica. Nuestros planos detallan cada aspecto del proyecto asegurando una construcción eficiente y de calidad.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 3 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 3 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Construcción de casas y apartamentos que combinan calidad, funcionalidad y diseño estético. Cada proyecto se desarrolla con materiales de primera calidad y técnicas constructivas modernas.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 4 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 4 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Construcción de locales comerciales y bodegas diseñados para maximizar la funcionalidad y eficiencia operativa. Espacios optimizados para diferentes tipos de negocio.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 5 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 5 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Coordinación BIM de proyectos utilizando tecnología de modelado de información de construcción para optimizar el proceso de diseño y construcción, reduciendo errores y mejorando la eficiencia.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 6 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 6 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Estructuración de proyectos con análisis detallado de carga, diseño de cimentaciones y sistemas estructurales que garantizan la seguridad y durabilidad de la construcción.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 7 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 7 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Licencias de contratación y consultoría urbana, gestionando todos los permisos y trámites necesarios para el desarrollo de proyectos constructivos, cumpliendo con las normativas locales.
                     </p>
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
-                {selectedProject.index === 8 && (
-                  <div className="space-y-6">
+                {selectedProject.index === 8 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
                       Diseño paramétrico y en Guadua que aprovecha las propiedades únicas de este material sostenible. La guadua ofrece resistencia, flexibilidad y belleza natural, creando estructuras innovadoras y ecológicamente responsables.
@@ -404,20 +342,17 @@ const Gallery = () => {
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => (
-                            <CarouselItem key={index}>
+                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
                               <div className="aspect-video overflow-hidden rounded-lg">
                                 <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-4" />
                         <CarouselNext className="right-4" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
                 {/* Botón de contacto */}
                 <div className="flex justify-center pt-4">
