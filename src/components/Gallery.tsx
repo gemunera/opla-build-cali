@@ -301,7 +301,9 @@ const Gallery = () => {
                     Diseño zona húmeda las Mercedes
                   </h3>
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto residencial unifamiliar que combina diseño contemporáneo con funcionalidad. Esta vivienda se caracteriza por su arquitectura minimalista, espacios interiores amplios y bien iluminados, cocina moderna integrada al área social, y fachada con elementos de madera que aportan calidez al diseño. El proyecto incluye optimización de espacios y acabados de alta calidad, creando un hogar confortable y estéticamente atractivo para la familia.
+                    <strong>UBICACIÓN:</strong> Pance; Cali, Colombia<br /><br />
+                    Se propone una piscina y una zona húmeda concebidas para dar la sensación de haber estado siempre ahí, integrándose de manera orgánica con el entorno. Su diseño se inspira en la naturalidad de la topografía, adoptando formas fluidas que evocan las curvas suaves e impredecibles propias de la perfección de la naturaleza.<br /><br />
+                    La intención es que el espacio se perciba como una prolongación del paisaje, evitando líneas rígidas o artificiosas y alcanzando una armonía visual que evoque un ambiente natural, atemporal y contemplativo. Este planteamiento refleja los principios de la arquitectura paramétrica generativa, donde el diseño surge en diálogo con la naturaleza y su geometría orgánica.
                   </p>
                   <div className="relative">
                     <Carousel className="w-full">
