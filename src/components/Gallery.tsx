@@ -226,7 +226,9 @@ const Gallery = () => {
                 {/* Tercer proyecto: Zona Húmeda Familia Cifuentes */}
                 <div className="space-y-6">
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto de zona húmeda familiar diseñado con arquitectura contemporánea que integra armoniosamente espacios interiores y exteriores. Esta obra destaca por su diseño de piscina, áreas sociales techadas y un cuidado paisajismo que crea un ambiente de relajación y recreación familiar, maximizando el aprovechamiento de los espacios exteriores.
+                    <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
+                    La piscina propone una visión innovadora al reinterpretar la relación entre la vivienda y el entorno selvático. Concebida como un espejo de agua, busca reflejar la caída de las ramas y el movimiento de los árboles, integrándose a través de un diseño de paisajismo sutil y casi oculto. A lo largo del día, los habitantes descubren gradualmente estos matices naturales, generando una conexión viva y cambiante entre la arquitectura y la naturaleza.<br /><br />
+                    El diseño no solo enfatiza la integración armónica entre agua y vegetación, sino que también ofrece una experiencia sensorial inmersiva que evoca la serenidad, el asombro y la magia de un ambiente selvático. Se trata de un enfoque creativo que convierte el espacio en un lugar de contemplación y descubrimiento constante.
                   </p>
                   <div className="relative">
                     <Carousel className="w-full">
