@@ -244,6 +244,29 @@ const Gallery = () => {
                       </div>
                     </div>
 
+                    {/* Renovación Urbana de la Galería Santa Elena */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Renovación Urbana de la Galería Santa Elena + Edificio Complementario de Comercio y Servicios</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Valle del Cauca, Cali<br /><br />
+                        Esta propuesta plantea la revitalización de la Galería Santa Elena, el principal centro de acopio de alimentos de la ciudad de Cali y un nodo estratégico para la distribución hacia otras galerías de escala barrial. En la actualidad, este importante espacio se encuentra en un contexto de abandono, rodeado de comercio informal, problemáticas sociales como el microtráfico y un marcado deterioro de su valor patrimonial.<br /><br />
+                        La intervención cobra aún mayor relevancia al tratarse de una obra emblemática diseñada en los años 40 por el arquitecto Félix Candela, cuyo legado arquitectónico merece ser recuperado y potenciado en beneficio de la ciudad y sus habitantes.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/0073a662-9d17-4579-8f72-edb56d676b70.png', '/lovable-uploads/5c6a0f1e-f287-4a47-9691-5220b46c30b5.png', '/lovable-uploads/ef8139be-5e45-4ad6-a9e8-fc7cc2de7d60.png', '/lovable-uploads/2f683ba5-f121-4938-b205-12035dc8299b.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Renovación Urbana Galería Santa Elena - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
                     {/* CAF Alberto Galindo */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">CAF Alberto Galindo</h3>
