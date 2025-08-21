@@ -290,6 +290,29 @@ const Gallery = () => {
                       </div>
                     </div>
 
+                    {/* Proyecto Comercial – Bodegas de San Nicolás */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Proyecto Comercial – Bodegas de San Nicolás</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Las bodegas comerciales se han consolidado como una alternativa en crecimiento dentro del sector inmobiliario gracias a su versatilidad, tanto en el ámbito normativo como en el constructivo. Estos proyectos permiten una dinámica comercial mixta, ofreciendo flexibilidad para distintos tipos de negocios y ampliando así sus posibilidades de uso.<br /><br />
+                        La clave de la propuesta radica en priorizar la funcionalidad y mantener una inversión inicial reducida, lo que se traduce en un alto retorno de utilidades una vez en operación. Este enfoque convierte a las bodegas comerciales en una opción atractiva tanto para inversionistas como para empresas, al adaptarse a diversas necesidades comerciales y optimizar los costos de desarrollo.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/7199d69c-0a0d-4136-8760-f836ef2837e5.png', '/lovable-uploads/0f4b0a1b-e60f-4e5a-8bc9-a80c71847176.png', '/lovable-uploads/47a706cc-3cad-4f1e-8772-e98bec7d17ea.png', '/lovable-uploads/ed6b849a-fd20-499a-9f58-c752ff8312ac.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Bodegas de San Nicolás - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
                     {/* CAF Alberto Galindo */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">CAF Alberto Galindo</h3>
