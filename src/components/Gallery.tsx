@@ -264,7 +264,9 @@ const Gallery = () => {
                     Diseño de casas y apartamentos
                   </h3>
                   <p className="text-lg text-construction-gray-dark leading-relaxed">
-                    Proyecto de diseño integral de zona húmeda de lujo que combina elementos arquitectónicos curvos y orgánicos con tecnología de punta. Esta obra se caracteriza por su piscina de diseño serpenteante con jacuzzi integrado, áreas de spa interiores con acabados en mosaico, iluminación LED perimetral y paisajismo tropical. El diseño maximiza la experiencia sensorial y el bienestar, creando un oasis privado de relajación y entretenimiento.
+                     <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
+                    Este proyecto busca equilibrar una visión contemporánea —representada por "la piscina en la casa"— con la esencia de la arquitectura colonial. La propuesta integra la piscina como un elemento protagónico del espacio, al tiempo que rescata los rasgos característicos del estilo colonial: patios centrales, galerías abiertas y el uso de materiales autóctonos.<br /><br />
+                    El desafío radica en lograr una armonía entre ambas corrientes, conservando la sofisticación y el carácter histórico de la arquitectura colonial, mientras se incorpora la piscina como un recurso estético y funcional de lenguaje actual. El planteamiento respeta las proporciones, los detalles ornamentales y la atmósfera acogedora del estilo colonial, a la vez que convierte la piscina en un espejo de agua que enriquece el entorno, reflejando tanto la naturaleza circundante como los elementos arquitectónicos.
                   </p>
                   <div className="relative">
                     <Carousel className="w-full">
