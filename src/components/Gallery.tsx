@@ -357,21 +357,27 @@ const Gallery = () => {
                   </div>}
 
                 {selectedProject.index === 3 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      Construcción de casas y apartamentos que combinan calidad, funcionalidad y diseño estético. Cada proyecto se desarrolla con materiales de primera calidad y técnicas constructivas modernas.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                    {/* Proyecto de adecuación de zona húmeda Alto Pance */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Proyecto de adecuación de zona húmeda Alto Pance</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Pance, Valle del Cauca – Colombia<br /><br />
+                        Este proyecto parte de un análisis cuidadoso de las estructuras hidrosanitarias, eléctricas y arquitectónicas existentes en la vivienda, con el fin de integrarlas de manera armónica al nuevo diseño. La propuesta prioriza el aprovechamiento del paisaje y de las zonas verdes subutilizadas, que poseen un gran potencial para transformarse en escenarios de disfrute y bienestar.<br /><br />
+                        La piscina se plantea como el elemento jerárquico del conjunto, orientada hacia el horizonte de la ciudad. Más que un espacio recreativo, se concibe como un lugar de contemplación y encuentro, donde la topografía se convierte en aliada para generar amplitud visual y un diálogo constante con el entorno. El resultado es un balance entre las áreas de permanencia y las visuales, ofreciendo una experiencia que invita tanto a la relajación como a la conexión profunda con el paisaje.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/ba15f946-8078-4955-9ccb-427386555d44.png', '/lovable-uploads/70b7fb32-1ccc-405b-8979-08b3750a4a3d.png', '/lovable-uploads/61b2cfa3-095a-4ad9-8103-921adbb37ad2.png', '/lovable-uploads/fc2bcc19-7543-455a-871a-52eef719c2d0.png', '/lovable-uploads/a093f147-f279-46a2-b6f5-2b184b295471.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Alto Pance - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>}
 
