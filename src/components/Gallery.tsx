@@ -176,6 +176,30 @@ const Gallery = () => {
                         </Carousel>
                       </div>
                     </div>
+
+                    {/* Adecuación de Zona Húmeda – Casa 29 Las Mercedes */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Adecuación de Zona Húmeda – Casa 29 Las Mercedes</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
+                        La piscina plantea una propuesta disruptiva al reinterpretar la relación entre el entorno selvático y la vivienda. Concebida como un espejo de agua, busca reflejar la caída de las ramas y el movimiento de los árboles, incorporando un enfoque de paisajismo sutil y oculto.<br /><br />
+                        A lo largo del día, los habitantes descubren gradualmente estos matices naturales, generando una conexión dinámica entre la arquitectura y el paisaje. El diseño no solo resalta la integración del agua y la vegetación, sino que también ofrece una experiencia sensorial inmersiva que evoca la serenidad y el asombro de un ambiente selvático.<br /><br />
+                        Se trata de un enfoque creativo que transforma el espacio en un lugar de contemplación y descubrimiento constante.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/8ab54efe-26c6-4f98-8084-a68a7e0b6b65.png', '/lovable-uploads/aa9b863b-8778-4493-b53f-abfccf49f5bd.png', '/lovable-uploads/aa8b0560-8d61-4553-bb32-5ceb6569f8ee.png', '/lovable-uploads/0cb224bb-a1ae-408f-b627-8b333b58055f.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Casa 29 Las Mercedes - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
                   </div>}
 
                 {selectedProject.index === 1 && <div className="space-y-8">
