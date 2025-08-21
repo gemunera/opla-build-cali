@@ -379,6 +379,29 @@ const Gallery = () => {
                         </Carousel>
                       </div>
                     </div>
+
+                    {/* Adecuación Cocina Jiménez Carrillo */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Adecuación Cocina Jiménez Carrillo</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Barranquilla, Colombia<br /><br />
+                        En la vibrante ciudad de Barranquilla, esta vivienda fue renovada a través de una cuidadosa adecuación que refleja y potencia la dinámica familiar de sus residentes. Cada detalle del diseño fue personalizado para responder a sus necesidades, con especial énfasis en la integración del amplio y hermoso patio, convertido en el verdadero corazón del hogar.<br /><br />
+                        Este espacio al aire libre, perfectamente adaptado al clima cálido de la región, invita a disfrutar momentos de convivencia y relajación, logrando un equilibrio armónico entre funcionalidad, estética y confort.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/a271a4de-04d6-4d53-9b35-f2febf506fce.png', '/lovable-uploads/bb447689-3c7e-4588-a24f-4e816fd94840.png', '/lovable-uploads/1de09e36-5961-475b-90e6-99ea2b494383.png', '/lovable-uploads/b3673c7c-76ce-40e3-b98b-bc07e39b0671.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Adecuación Cocina Jiménez Carrillo - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
                   </div>}
 
                 {selectedProject.index === 4 && <div className="space-y-6">
