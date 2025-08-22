@@ -454,22 +454,30 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 5 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      Estructuración de proyectos con análisis detallado de carga, diseño de cimentaciones y sistemas estructurales que garantizan la seguridad y durabilidad de la construcción.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                {selectedProject.index === 5 && <div className="space-y-8">
+                    {/* Torres Lirios del Limonar */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Torres Lirios del Limonar</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Valle del Cauca, Cali<br />
+                        <strong>OBJETIVO DEL PROYECTO:</strong> Inversión Multifamiliar<br />
+                        <strong>CLIENTE:</strong> Privado<br /><br />
+                        El proyecto plantea un aprovechamiento óptimo del lote, procurando preservar al máximo sus zonas verdes. A través de una configuración orgánica, la propuesta integra múltiples patios internos y externos dentro de la torre, lo que favorece la ventilación cruzada y la oxigenación de todos los espacios.<br /><br />
+                        De esta manera, se busca ofrecer a los residentes una experiencia de vida en la ciudad rodeada de vegetación, generando una unidad habitacional fresca, sostenible y en estrecha conexión con la naturaleza.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/282f5022-29f6-4f0e-8205-87a9e9e1589d.png', '/lovable-uploads/5eab3187-fd25-4748-8cca-c88576560201.png', '/lovable-uploads/4f083e4d-903a-4a96-94ca-ff289036f9d7.png', '/lovable-uploads/ceb107c0-c93d-4658-9325-8eaa9c990e1a.png', '/lovable-uploads/2566bcc5-935d-4829-a111-b44d35d190e0.png', '/lovable-uploads/817c9531-9038-4448-82cb-e4fb67390f92.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Torres Lirios del Limonar - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>}
 
