@@ -41,9 +41,9 @@ const Gallery = () => {
     gallery: [officeImage, houseImage, heroImage]
   }, {
     title: t('gallery.project7.title'),
-    image: '/lovable-uploads/dc121345-4688-4936-a991-2752670e2efb.png',
+    image: '/lovable-uploads/345905d9-5f0d-4e7b-bfb8-df625ac9f0bf.png',
     description: t('gallery.project7.description'),
-    gallery: ['/lovable-uploads/dc121345-4688-4936-a991-2752670e2efb.png', '/lovable-uploads/2ac6802f-6cc5-41a1-a541-9365627518b0.png', '/lovable-uploads/37bb20a0-95c0-4b0d-9980-d2f0c3db9272.png', '/lovable-uploads/581ac8c7-d1c0-4691-8a06-eef94244f682.png']
+    gallery: ['/lovable-uploads/345905d9-5f0d-4e7b-bfb8-df625ac9f0bf.png', '/lovable-uploads/2ac6802f-6cc5-41a1-a541-9365627518b0.png', '/lovable-uploads/37bb20a0-95c0-4b0d-9980-d2f0c3db9272.png', '/lovable-uploads/581ac8c7-d1c0-4691-8a06-eef94244f682.png']
   }, {
     title: t('gallery.project8.title'),
     image: officeImage,
