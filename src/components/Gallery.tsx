@@ -427,22 +427,30 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 4 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      Coordinación BIM de proyectos utilizando tecnología de modelado de información de construcción para optimizar el proceso de diseño y construcción, reduciendo errores y mejorando la eficiencia.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                {selectedProject.index === 4 && <div className="space-y-8">
+                    {/* Coordinación de Diseños BIM para Celsia – Endress and Hauser */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Coordinación de Diseños BIM para Celsia – Endress and Hauser</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Fuimos invitados a participar en este destacado proyecto, reconocido por su alto impacto económico y social en el Valle del Cauca. Nuestra labor principal consistió en la coordinación de las instalaciones eléctricas en conjunto con todos los sistemas MEP (mecánicos, eléctricos y de plomería), un desafío técnico que asumimos con total compromiso y profesionalismo.<br /><br />
+                        El objetivo fundamental del desarrollo fue disminuir los riesgos durante la etapa de construcción, a través de una planificación detallada que integrara cada sistema de manera armónica y eficiente. Este enfoque no solo garantizó la seguridad en la ejecución de la obra, sino que también optimizó el uso de recursos, redujo posibles interferencias técnicas y minimizó retrasos en el cronograma.<br /><br />
+                        Adicionalmente, nuestra labor incluyó la supervisión de la correcta implementación de los sistemas, asegurando el cumplimiento de los estándares de calidad, la normativa vigente y las expectativas del cliente.<br /><br />
+                        Este proyecto constituye una valiosa contribución al desarrollo sostenible y a la infraestructura del Valle, consolidándose como un ejemplo de cómo la colaboración y la excelencia técnica pueden generar un impacto positivo y duradero en la región.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/70553293-d7ba-445e-91ed-79750a89b943.png', '/lovable-uploads/819e945a-844c-499b-a2f3-3ce37f640b71.png', '/lovable-uploads/4c814a1b-cd3e-45f4-a854-65ce2987ec22.png', '/lovable-uploads/e093ef25-8c50-457d-8acd-1331dfc09608.png', '/lovable-uploads/75c5b081-1dd8-4eea-824a-bf83d92e320e.png', '/lovable-uploads/3eb2e96a-f96b-4b3a-a898-21445fb18605.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Coordinación BIM Celsia - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>}
 
