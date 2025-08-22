@@ -581,7 +581,7 @@ const Gallery = () => {
 
                     {/* Mejoramiento de la Iglesia Santa Teresa */}
                     <div className="space-y-6">
-                      <h3 className="text-xl font-bold text-construction-dark">Mejoramiento de la Iglesia Santa Teresa</h3>
+                      <h3 className="text-xl font-bold text-construction-dark"></h3>
                       <p className="text-lg text-construction-gray-dark leading-relaxed">
                         Desarrollo Arquitectónico con IA
                       </p>
