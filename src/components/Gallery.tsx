@@ -36,7 +36,7 @@ const Gallery = () => {
     gallery: [officeImage, heroImage, houseImage]
   }, {
     title: t('gallery.project6.title'),
-    image: '/lovable-uploads/072229f5-7a96-4a47-a132-cbcccfea93e6.png',
+    image: '/lovable-uploads/72d168f4-2e5a-4fac-b0f0-f9fc124ae9a3.png',
     description: t('gallery.project6.description'),
     gallery: [officeImage, houseImage, heroImage]
   }, {
