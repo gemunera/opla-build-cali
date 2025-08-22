@@ -505,6 +505,30 @@ const Gallery = () => {
                       </div>
                     </div>
 
+                    {/* Proyecto Comercial Bodegas D1 Buenaventura */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Proyecto Comercial Bodegas D1 Buenaventura</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Este inmueble, destinado a las Tiendas D1, se plantea como un proyecto de rehabilitación orientado a revitalizar un lote en desuso, optimizando su potencial urbano y generando valor en su contexto inmediato.<br /><br />
+                        El marco normativo de Buenaventura, respaldado por su plan de desarrollo, permite usos comerciales mixtos en la mayoría de sus vías zonales y principales, lo que abre la posibilidad de consolidar este espacio como un referente comercial estratégico.<br /><br />
+                        No obstante, uno de los principales desafíos identificados ha sido la calidad del suelo y las áreas propensas a licuefacción. A partir de los estudios geotécnicos realizados por nuestra firma, se ha definido un enfoque técnico riguroso y cuidadoso para el diseño y la ejecución, garantizando la seguridad estructural, la viabilidad normativa y la sostenibilidad del proyecto en el tiempo.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/c91e34ba-3991-49f9-8ba6-6ef42f6c5112.png', '/lovable-uploads/92f56772-5ee6-42dc-a420-8796c42d2753.png', '/lovable-uploads/008262e9-32e5-408f-9ed9-5a00c2207a26.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Proyecto Comercial Bodegas D1 Buenaventura - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
                     {/* Bodegas San Luis Gonzaga */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">Bodegas San Luis Gonzaga</h3>
