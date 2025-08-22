@@ -554,23 +554,51 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 7 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
-                      Diseño paramétrico y en Guadua que aprovecha las propiedades únicas de este material sostenible. La guadua ofrece resistencia, flexibilidad y belleza natural, creando estructuras innovadoras y ecológicamente responsables.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                {selectedProject.index === 7 && <div className="space-y-8">
+                    {/* Mejoramiento de la Iglesia Santa Teresa */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Mejoramiento de la Iglesia Santa Teresa</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        La Iglesia Santa Teresa, como espacio de culto y encuentro comunitario, se concibe a partir de jerarquías culturales que determinan tanto su diseño como su función. Esta propuesta de mejoramiento arquitectónico busca reinterpretar, desde una mirada contemporánea, los lineamientos que en la década de 1960 definían este tipo de edificaciones religiosas, adaptándolos a las necesidades y dinámicas actuales de la población.<br /><br />
+                        El proyecto se enfoca en crear un espacio inclusivo, flexible y abierto a la comunidad, capaz de responder no solo a las celebraciones litúrgicas, sino también a las múltiples actividades sociales y culturales que fortalecen la vida en común. A través de la incorporación de elementos modernos, se busca renovar la estética del templo y, al mismo tiempo, preservar su significado espiritual, generando una mayor conexión entre los fieles, su entorno y la identidad del lugar.<br /><br />
+                        De esta manera, la propuesta no solo moderniza la infraestructura, sino que fortalece el sentido de pertenencia y participación comunitaria, consolidando a la Iglesia Santa Teresa como un referente de cohesión social, espiritual y cultural en la ciudad.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/103392f1-0d8e-4215-a744-08117de26307.png', '/lovable-uploads/de2d6676-690f-4f1d-9520-6a907611ec36.png', '/lovable-uploads/d5a1e078-1eb3-419f-b7be-a49e57200fab.png', '/lovable-uploads/0babfb47-29ed-4c18-a6a3-54a00a6ffe20.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Mejoramiento de la Iglesia Santa Teresa - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
+                    {/* Diseño paramétrico y en Guadua */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Diseño Paramétrico y en Guadua</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
+                        Diseño paramétrico y en Guadua que aprovecha las propiedades únicas de este material sostenible. La guadua ofrece resistencia, flexibilidad y belleza natural, creando estructuras innovadoras y ecológicamente responsables.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>}
 
