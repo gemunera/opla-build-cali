@@ -380,22 +380,28 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 3 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      Construcción de locales comerciales y bodegas diseñados para maximizar la funcionalidad y eficiencia operativa. Espacios optimizados para diferentes tipos de negocio.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                {selectedProject.index === 3 && <div className="space-y-8">
+                    {/* Proyecto Comercial – Bodegas de San Nicolás */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Proyecto Comercial – Bodegas de San Nicolás</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Las bodegas comerciales están adquiriendo cada vez mayor relevancia en el sector de inversión inmobiliaria gracias a su versatilidad, tanto en el ámbito normativo como en el constructivo. Estos proyectos permiten una dinámica comercial mixta, brindando flexibilidad para diferentes tipos de negocios y ampliando sus posibilidades de uso.<br /><br />
+                        La clave de esta propuesta radica en priorizar la funcionalidad y mantener una inversión inicial reducida, lo que se traduce en un alto retorno una vez que las bodegas entran en operación. Este enfoque convierte a las bodegas comerciales en una alternativa altamente atractiva tanto para inversionistas como para empresas, al adaptarse a diversas necesidades y optimizar los costos de desarrollo.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/060c3f23-b2bb-471f-b5f2-7854445da081.png', '/lovable-uploads/754f5784-ba20-4256-85ca-8fbdbd4ed07d.png', '/lovable-uploads/8ab7bae7-2e0b-4b80-8eff-637381a3ae92.png', '/lovable-uploads/9bd4b9e4-0686-4c2a-bf8f-b9571cd754fd.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Bodegas de San Nicolás - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>}
 
