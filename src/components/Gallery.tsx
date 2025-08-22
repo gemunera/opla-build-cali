@@ -481,22 +481,29 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 6 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      Licencias de contratación y consultoría urbana, gestionando todos los permisos y trámites necesarios para el desarrollo de proyectos constructivos, cumpliendo con las normativas locales.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
+                {selectedProject.index === 6 && <div className="space-y-8">
+                    {/* Bodegas San Luis Gonzaga */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Bodegas San Luis Gonzaga</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Este proyecto representa un reto singular debido a la complejidad de la normativa urbana y legal asociada, convirtiéndose en uno de los primeros grandes desafíos para nuestra oficina. En esta ocasión, asumimos el rol de consultores en normativa urbana, poniendo en práctica la experiencia y el conocimiento especializado de nuestro equipo.<br /><br />
+                        Nuestro objetivo principal fue diseñar una estrategia sólida que garantizara la continuidad del uso comercial del inmueble, asegurando su funcionamiento bajo el cumplimiento estricto de las regulaciones vigentes. El proceso contempló la gestión y reconocimiento ante el DAPM y la Curaduría, respondiendo de manera precisa a las exigencias del contexto urbano.<br /><br />
+                        Este proyecto reafirma nuestra capacidad para transformar los retos normativos en soluciones viables y sostenibles, aportando seguridad jurídica y funcionalidad a las iniciativas de nuestros clientes.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/2ac6802f-6cc5-41a1-a541-9365627518b0.png', '/lovable-uploads/37bb20a0-95c0-4b0d-9980-d2f0c3db9272.png', '/lovable-uploads/581ac8c7-d1c0-4691-8a06-eef94244f682.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Bodegas San Luis Gonzaga - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
                     </div>
                   </div>}
 
