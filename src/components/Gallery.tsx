@@ -51,9 +51,9 @@ const Gallery = () => {
     gallery: [officeImage, heroImage, houseImage]
   }, {
     title: t('gallery.project9.title'),
-    image: houseImage,
+    image: '/lovable-uploads/5c9df769-a075-4b2e-bf94-bef7e81b0a91.png',
     description: t('gallery.project9.description'),
-    gallery: [houseImage, heroImage, officeImage]
+    gallery: ['/lovable-uploads/5c9df769-a075-4b2e-bf94-bef7e81b0a91.png', heroImage, officeImage]
   }];
   const openModal = (project: any, index: number) => {
     setSelectedProject({
