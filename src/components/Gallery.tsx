@@ -493,7 +493,7 @@ const Gallery = () => {
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {['/lovable-uploads/7eef2e2f-773a-437c-bf22-5fb48986319c.png', '/lovable-uploads/2e75c839-16e6-4452-a4a0-b9b4b1aa4c94.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                            {['/lovable-uploads/7eef2e2f-773a-437c-bf22-5fb48986319c.png', '/lovable-uploads/f4772659-6050-48b2-9b9f-d5c64616fef9.png'].map((image: string, index: number) => <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
                                   <img src={image} alt={`Proyecto Comercial Bodegas Luis Enríquez - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                                 </div>
