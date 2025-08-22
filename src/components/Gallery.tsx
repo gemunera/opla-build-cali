@@ -403,6 +403,28 @@ const Gallery = () => {
                         </Carousel>
                       </div>
                     </div>
+
+                    {/* Adecuación de Local Comercial "Doble Dosis de Licor" */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Adecuación de Local Comercial "Doble Dosis de Licor"</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        El proyecto se centra en la rehabilitación de un local comercial en estado de deterioro, ubicado en una zona de alto tránsito y con un potencial significativo para el negocio de expendio de licores. La propuesta busca transformar este espacio en un ambiente acogedor y atractivo, capaz de captar la atención de una clientela diversa y fomentar un entorno social dinámico y vibrante.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/e8eeb114-2dbe-4633-8e48-d51aead7a491.png', '/lovable-uploads/7f7b92ac-9919-4dab-a672-711c7ee1037e.png', '/lovable-uploads/8e2bc59a-0ddd-4a90-8fb9-74045be09e8b.png', '/lovable-uploads/aa19cc32-7322-45b0-bf1b-8be72b9ad09d.png', '/lovable-uploads/7a2352ce-a4bb-430a-834a-944a3e2189da.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Doble Dosis de Licor - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
                   </div>}
 
                 {selectedProject.index === 4 && <div className="space-y-6">
