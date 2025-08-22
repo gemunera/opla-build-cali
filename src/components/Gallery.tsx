@@ -53,7 +53,7 @@ const Gallery = () => {
     title: t('gallery.project9.title'),
     image: '/lovable-uploads/5c9df769-a075-4b2e-bf94-bef7e81b0a91.png',
     description: t('gallery.project9.description'),
-    gallery: ['/lovable-uploads/5c9df769-a075-4b2e-bf94-bef7e81b0a91.png', heroImage, officeImage]
+    gallery: ['/lovable-uploads/5c9df769-a075-4b2e-bf94-bef7e81b0a91.png', '/lovable-uploads/ed1adf82-dcf5-4776-8d68-fd0a8bc02a85.png', '/lovable-uploads/054698f8-253b-4ee7-b196-3d2da01577ea.png', '/lovable-uploads/7100aad4-1ddf-45e9-a2df-d0383766cd90.png', '/lovable-uploads/be5d66f5-bbc9-415e-acf8-dc3f6c7c658f.png', '/lovable-uploads/e1f6455b-b067-46db-b622-0da45943c6b2.png']
   }];
   const openModal = (project: any, index: number) => {
     setSelectedProject({
@@ -579,19 +579,21 @@ const Gallery = () => {
                       </div>
                     </div>
 
-                    {/* Diseño paramétrico y en Guadua */}
+                    {/* Mejoramiento de la Iglesia Santa Teresa */}
                     <div className="space-y-6">
-                      <h3 className="text-xl font-bold text-construction-dark">Diseño Paramétrico y en Guadua</h3>
+                      <h3 className="text-xl font-bold text-construction-dark">Mejoramiento de la Iglesia Santa Teresa</h3>
                       <p className="text-lg text-construction-gray-dark leading-relaxed">
-                        <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
-                        Diseño paramétrico y en Guadua que aprovecha las propiedades únicas de este material sostenible. La guadua ofrece resistencia, flexibilidad y belleza natural, creando estructuras innovadoras y ecológicamente responsables.
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        La Iglesia Santa Teresa, como espacio de culto y encuentro comunitario, se concibe a partir de jerarquías culturales que determinan tanto su diseño como su función. Esta propuesta de mejoramiento arquitectónico busca reinterpretar, desde una mirada contemporánea, los lineamientos que en la década de 1960 definían este tipo de edificaciones religiosas, adaptándolos a las necesidades y dinámicas actuales de la población.<br /><br />
+                        El proyecto se enfoca en crear un espacio inclusivo, flexible y abierto a la comunidad, capaz de responder no solo a las celebraciones litúrgicas, sino también a las múltiples actividades sociales y culturales que fortalecen la vida en común. A través de la incorporación de elementos modernos, se busca renovar la estética del templo y, al mismo tiempo, preservar su significado espiritual, generando una mayor conexión entre los fieles, su entorno y la identidad del lugar.<br /><br />
+                        De esta manera, la propuesta no solo moderniza la infraestructura, sino que fortalece el sentido de pertenencia y participación comunitaria, consolidando a la Iglesia Santa Teresa como un referente de cohesión social, espiritual y cultural en la ciudad.
                       </p>
                       <div className="relative">
                         <Carousel className="w-full">
                           <CarouselContent>
-                            {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
+                            {['/lovable-uploads/5c9df769-a075-4b2e-bf94-bef7e81b0a91.png', '/lovable-uploads/ed1adf82-dcf5-4776-8d68-fd0a8bc02a85.png', '/lovable-uploads/054698f8-253b-4ee7-b196-3d2da01577ea.png', '/lovable-uploads/7100aad4-1ddf-45e9-a2df-d0383766cd90.png', '/lovable-uploads/be5d66f5-bbc9-415e-acf8-dc3f6c7c658f.png', '/lovable-uploads/e1f6455b-b067-46db-b622-0da45943c6b2.png'].map((image: string, index: number) => <CarouselItem key={index}>
                                 <div className="aspect-video overflow-hidden rounded-lg">
-                                  <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                  <img src={image} alt={`Mejoramiento de la Iglesia Santa Teresa - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                                 </div>
                               </CarouselItem>)}
                           </CarouselContent>
