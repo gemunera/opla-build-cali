@@ -482,6 +482,29 @@ const Gallery = () => {
                   </div>}
 
                 {selectedProject.index === 6 && <div className="space-y-8">
+                    {/* Proyecto Comercial Bodegas Luis Enríquez */}
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-bold text-construction-dark">Proyecto Comercial Bodegas Luis Enríquez</h3>
+                      <p className="text-lg text-construction-gray-dark leading-relaxed">
+                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
+                        Este proyecto representó el reto de gestionar y obtener la licencia de construcción para transformar un inmueble originalmente destinado a vivienda multifamiliar en un local y bodegas comerciales.<br /><br />
+                        El proceso de adaptación requirió un análisis cuidadoso del estado del edificio, que integra características de la arquitectura vernácula y contemporánea, permitiendo reconocer su valor y a la vez proyectar un uso renovado. El diseño planteado busca maximizar el potencial del inmueble, garantizando un espacio funcional, eficiente y estéticamente atractivo, alineado con las nuevas dinámicas comerciales y urbanas de la zona.
+                      </p>
+                      <div className="relative">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {['/lovable-uploads/7eef2e2f-773a-437c-bf22-5fb48986319c.png', '/lovable-uploads/2e75c839-16e6-4452-a4a0-b9b4b1aa4c94.png'].map((image: string, index: number) => <CarouselItem key={index}>
+                                <div className="aspect-video overflow-hidden rounded-lg">
+                                  <img src={image} alt={`Proyecto Comercial Bodegas Luis Enríquez - Imagen ${index + 1}`} className="w-full h-full object-cover" />
+                                </div>
+                              </CarouselItem>)}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-4" />
+                          <CarouselNext className="right-4" />
+                        </Carousel>
+                      </div>
+                    </div>
+
                     {/* Bodegas San Luis Gonzaga */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">Bodegas San Luis Gonzaga</h3>
