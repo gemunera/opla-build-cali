@@ -583,10 +583,7 @@ const Gallery = () => {
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">Mejoramiento de la Iglesia Santa Teresa</h3>
                       <p className="text-lg text-construction-gray-dark leading-relaxed">
-                        <strong>UBICACIÓN:</strong> Cali, Colombia<br /><br />
-                        La Iglesia Santa Teresa, como espacio de culto y encuentro comunitario, se concibe a partir de jerarquías culturales que determinan tanto su diseño como su función. Esta propuesta de mejoramiento arquitectónico busca reinterpretar, desde una mirada contemporánea, los lineamientos que en la década de 1960 definían este tipo de edificaciones religiosas, adaptándolos a las necesidades y dinámicas actuales de la población.<br /><br />
-                        El proyecto se enfoca en crear un espacio inclusivo, flexible y abierto a la comunidad, capaz de responder no solo a las celebraciones litúrgicas, sino también a las múltiples actividades sociales y culturales que fortalecen la vida en común. A través de la incorporación de elementos modernos, se busca renovar la estética del templo y, al mismo tiempo, preservar su significado espiritual, generando una mayor conexión entre los fieles, su entorno y la identidad del lugar.<br /><br />
-                        De esta manera, la propuesta no solo moderniza la infraestructura, sino que fortalece el sentido de pertenencia y participación comunitaria, consolidando a la Iglesia Santa Teresa como un referente de cohesión social, espiritual y cultural en la ciudad.
+                        Desarrollo Arquitectónico con IA
                       </p>
                       <div className="relative">
                         <Carousel className="w-full">
