@@ -13,7 +13,7 @@ const Gallery = () => {
   const {
     t
   } = useLanguage();
-  const projectTitles = ["Diseño de casas y apartamentos", "Diseños comercial, oficina y bodegas", "Diseño de planos constructivos", "Construcción de casas y apartamentos", "Construcción de L.comercial y bodegas", "Coordinación Bim de proyectos", "Estructuración de proyectos", "Licencia de contratación y consultoría urbana", "Diseño Parametrico y en Guadua"];
+  const projectTitles = ["Diseño de casas y apartamentos", "Diseños comercial, oficina y bodegas", "Construcción de casas y apartamentos", "Construcción de L.comercial y bodegas", "Coordinación Bim de proyectos", "Estructuración de proyectos", "Licencia de contratación y consultoría urbana", "Diseño Parametrico y en Guadua"];
   const projects = [{
     title: "Vivienda Multifamiliar San Mateo",
     image: '/lovable-uploads/2c99befe-7fbb-41fc-8c29-6d4cf3a8c746.png',
@@ -24,11 +24,6 @@ const Gallery = () => {
     image: '/lovable-uploads/f86c3e6b-f148-4229-934f-75ff872a6baa.png',
     description: t('gallery.project2.description'),
     gallery: ['/lovable-uploads/5d08e8df-3e3a-4cca-b61d-b137b2ea2dc1.png', '/lovable-uploads/bef0e36a-1c35-4020-830b-3c1794f3e047.png', '/lovable-uploads/906e0622-d3f7-49ee-acca-c2c48209433a.png', '/lovable-uploads/a3385894-373f-4f7f-9462-38c2f7779d80.png', '/lovable-uploads/a3163fb2-f351-4b2a-bf34-ce274d784d23.png']
-  }, {
-    title: t('gallery.project3.title'),
-    image: houseImage,
-    description: t('gallery.project3.description'),
-    gallery: [houseImage, officeImage, heroImage]
   }, {
     title: t('gallery.project4.title'),
     image: '/lovable-uploads/05fc68d0-bea2-4165-92c4-192dedbbcf82.png',
@@ -338,25 +333,6 @@ const Gallery = () => {
                   </div>}
 
                 {selectedProject.index === 2 && <div className="space-y-6">
-                    <p className="text-lg text-construction-gray-dark leading-relaxed">
-                      Diseño de planos constructivos que integran innovación técnica con funcionalidad práctica. Nuestros planos detallan cada aspecto del proyecto asegurando una construcción eficiente y de calidad.
-                    </p>
-                    <div className="relative">
-                      <Carousel className="w-full">
-                        <CarouselContent>
-                          {selectedProject.gallery.map((image: string, index: number) => <CarouselItem key={index}>
-                              <div className="aspect-video overflow-hidden rounded-lg">
-                                <img src={image} alt={`${selectedProject.title} - Imagen ${index + 1}`} className="w-full h-full object-cover" />
-                              </div>
-                            </CarouselItem>)}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
-                      </Carousel>
-                    </div>
-                  </div>}
-
-                {selectedProject.index === 3 && <div className="space-y-6">
                     {/* Proyecto de adecuación de zona húmeda Alto Pance */}
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-construction-dark">Proyecto de adecuación de zona húmeda Alto Pance</h3>
@@ -404,7 +380,7 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 4 && <div className="space-y-6">
+                {selectedProject.index === 3 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Construcción de locales comerciales y bodegas diseñados para maximizar la funcionalidad y eficiencia operativa. Espacios optimizados para diferentes tipos de negocio.
                     </p>
@@ -423,7 +399,7 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 5 && <div className="space-y-6">
+                {selectedProject.index === 4 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Coordinación BIM de proyectos utilizando tecnología de modelado de información de construcción para optimizar el proceso de diseño y construcción, reduciendo errores y mejorando la eficiencia.
                     </p>
@@ -442,7 +418,7 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 6 && <div className="space-y-6">
+                {selectedProject.index === 5 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Estructuración de proyectos con análisis detallado de carga, diseño de cimentaciones y sistemas estructurales que garantizan la seguridad y durabilidad de la construcción.
                     </p>
@@ -461,7 +437,7 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 7 && <div className="space-y-6">
+                {selectedProject.index === 6 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       Licencias de contratación y consultoría urbana, gestionando todos los permisos y trámites necesarios para el desarrollo de proyectos constructivos, cumpliendo con las normativas locales.
                     </p>
@@ -480,7 +456,7 @@ const Gallery = () => {
                     </div>
                   </div>}
 
-                {selectedProject.index === 8 && <div className="space-y-6">
+                {selectedProject.index === 7 && <div className="space-y-6">
                     <p className="text-lg text-construction-gray-dark leading-relaxed">
                       <strong>UBICACIÓN:</strong> Jamundí, Colombia<br /><br />
                       Diseño paramétrico y en Guadua que aprovecha las propiedades únicas de este material sostenible. La guadua ofrece resistencia, flexibilidad y belleza natural, creando estructuras innovadoras y ecológicamente responsables.
